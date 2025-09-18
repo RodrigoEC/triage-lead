@@ -5,8 +5,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "New"
+     "score": "hot",
+     "status": "new"
    },
    {
      "id": 2,
@@ -14,8 +14,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "Contacted"
+     "score": "medium",
+     "status": "contacted"
    },
    {
      "id": 3,
@@ -23,8 +23,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 4,
@@ -32,8 +32,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 5,
@@ -41,8 +41,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Advertisement",
-     "score": "Hot",
-     "status": "Converted"
+     "score": "hot",
+     "status": "converted"
    },
    {
      "id": 6,
@@ -50,8 +50,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Social Media",
-     "score": "Medium",
-     "status": "Contacted"
+     "score": "medium",
+     "status": "contacted"
    },
    {
      "id": 7,
@@ -59,8 +59,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 8,
@@ -68,8 +68,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 9,
@@ -77,8 +77,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 10,
@@ -86,8 +86,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 11,
@@ -95,8 +95,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 12,
@@ -104,8 +104,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 13,
@@ -113,8 +113,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 14,
@@ -122,8 +122,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 15,
@@ -131,8 +131,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 16,
@@ -140,8 +140,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 17,
@@ -149,8 +149,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 18,
@@ -158,8 +158,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 19,
@@ -167,8 +167,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 20,
@@ -176,8 +176,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 21,
@@ -185,8 +185,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 22,
@@ -194,8 +194,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 23,
@@ -203,8 +203,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 24,
@@ -212,8 +212,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 25,
@@ -221,8 +221,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 26,
@@ -230,8 +230,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 27,
@@ -239,8 +239,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 28,
@@ -248,8 +248,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 29,
@@ -257,8 +257,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 30,
@@ -266,8 +266,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 31,
@@ -275,8 +275,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 32,
@@ -284,8 +284,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 33,
@@ -293,8 +293,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 34,
@@ -302,8 +302,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 35,
@@ -311,8 +311,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 36,
@@ -320,8 +320,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 37,
@@ -329,8 +329,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 38,
@@ -338,8 +338,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 39,
@@ -347,8 +347,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 40,
@@ -356,8 +356,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 41,
@@ -365,8 +365,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 42,
@@ -374,8 +374,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 43,
@@ -383,8 +383,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 44,
@@ -392,8 +392,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 45,
@@ -401,8 +401,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 46,
@@ -410,8 +410,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 47,
@@ -419,8 +419,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 48,
@@ -428,8 +428,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 49,
@@ -437,8 +437,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 50,
@@ -446,8 +446,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 51,
@@ -455,8 +455,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 52,
@@ -464,8 +464,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 53,
@@ -473,8 +473,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 54,
@@ -482,8 +482,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 55,
@@ -491,8 +491,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 56,
@@ -500,8 +500,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 57,
@@ -509,8 +509,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 58,
@@ -518,8 +518,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 59,
@@ -527,8 +527,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 60,
@@ -536,8 +536,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 61,
@@ -545,8 +545,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 62,
@@ -554,8 +554,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 63,
@@ -563,8 +563,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 64,
@@ -572,8 +572,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 65,
@@ -581,8 +581,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 66,
@@ -590,8 +590,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 67,
@@ -599,8 +599,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 68,
@@ -608,8 +608,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 69,
@@ -617,8 +617,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 70,
@@ -626,8 +626,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 71,
@@ -635,8 +635,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 72,
@@ -644,8 +644,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 73,
@@ -653,8 +653,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 74,
@@ -662,8 +662,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 75,
@@ -671,8 +671,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 76,
@@ -680,8 +680,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 77,
@@ -689,8 +689,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 78,
@@ -698,8 +698,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 79,
@@ -707,8 +707,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 80,
@@ -716,8 +716,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 81,
@@ -725,8 +725,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 82,
@@ -734,8 +734,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 83,
@@ -743,8 +743,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 84,
@@ -752,8 +752,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 85,
@@ -761,8 +761,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 86,
@@ -770,8 +770,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 87,
@@ -779,8 +779,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 88,
@@ -788,8 +788,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 89,
@@ -797,8 +797,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 90,
@@ -806,8 +806,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 91,
@@ -815,8 +815,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 92,
@@ -824,8 +824,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 93,
@@ -833,8 +833,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 94,
@@ -842,8 +842,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 95,
@@ -851,8 +851,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 96,
@@ -860,8 +860,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 97,
@@ -869,8 +869,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 98,
@@ -878,8 +878,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 99,
@@ -887,8 +887,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 100,
@@ -896,8 +896,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 101,
@@ -905,8 +905,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 102,
@@ -914,8 +914,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 103,
@@ -923,8 +923,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 104,
@@ -932,8 +932,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 105,
@@ -941,8 +941,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 106,
@@ -950,8 +950,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 107,
@@ -959,8 +959,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 108,
@@ -968,8 +968,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 109,
@@ -977,8 +977,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 110,
@@ -986,8 +986,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 111,
@@ -995,8 +995,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 112,
@@ -1004,8 +1004,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 113,
@@ -1013,8 +1013,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 114,
@@ -1022,8 +1022,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 115,
@@ -1031,8 +1031,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 116,
@@ -1040,8 +1040,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 117,
@@ -1049,8 +1049,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 118,
@@ -1058,8 +1058,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 119,
@@ -1067,8 +1067,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 120,
@@ -1076,8 +1076,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 121,
@@ -1085,8 +1085,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 122,
@@ -1094,8 +1094,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 123,
@@ -1103,8 +1103,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 124,
@@ -1112,8 +1112,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 125,
@@ -1121,8 +1121,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 126,
@@ -1130,8 +1130,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 127,
@@ -1139,8 +1139,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 128,
@@ -1148,8 +1148,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 129,
@@ -1157,8 +1157,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 130,
@@ -1166,8 +1166,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 131,
@@ -1175,8 +1175,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 132,
@@ -1184,8 +1184,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 133,
@@ -1193,8 +1193,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 134,
@@ -1202,8 +1202,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 135,
@@ -1211,8 +1211,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 136,
@@ -1220,8 +1220,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 137,
@@ -1229,8 +1229,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 138,
@@ -1238,8 +1238,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 139,
@@ -1247,8 +1247,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 140,
@@ -1256,8 +1256,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 141,
@@ -1265,8 +1265,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 142,
@@ -1274,8 +1274,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 143,
@@ -1283,8 +1283,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 144,
@@ -1292,8 +1292,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 145,
@@ -1301,8 +1301,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 146,
@@ -1310,8 +1310,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 147,
@@ -1319,8 +1319,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 148,
@@ -1328,8 +1328,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 149,
@@ -1337,8 +1337,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 150,
@@ -1346,8 +1346,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 151,
@@ -1355,8 +1355,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 152,
@@ -1364,8 +1364,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 153,
@@ -1373,8 +1373,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 154,
@@ -1382,8 +1382,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 155,
@@ -1391,8 +1391,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 156,
@@ -1400,8 +1400,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 157,
@@ -1409,8 +1409,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 158,
@@ -1418,8 +1418,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 159,
@@ -1427,8 +1427,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 160,
@@ -1436,8 +1436,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 161,
@@ -1445,8 +1445,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 162,
@@ -1454,8 +1454,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 163,
@@ -1463,8 +1463,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 164,
@@ -1472,8 +1472,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 165,
@@ -1481,8 +1481,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 166,
@@ -1490,8 +1490,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 167,
@@ -1499,8 +1499,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 168,
@@ -1508,8 +1508,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 169,
@@ -1517,8 +1517,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 170,
@@ -1526,8 +1526,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 171,
@@ -1535,8 +1535,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 172,
@@ -1544,8 +1544,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 173,
@@ -1553,8 +1553,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 174,
@@ -1562,8 +1562,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 175,
@@ -1571,8 +1571,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 176,
@@ -1580,8 +1580,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 177,
@@ -1589,8 +1589,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 178,
@@ -1598,8 +1598,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 179,
@@ -1607,8 +1607,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 180,
@@ -1616,8 +1616,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 181,
@@ -1625,8 +1625,8 @@
      "company": "Quantum Solutions",
      "email": "elijah.smith@quantumsolutions.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 182,
@@ -1634,8 +1634,8 @@
      "company": "Apex Enterprises",
      "email": "ava.martinez@apexenterprises.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 183,
@@ -1643,8 +1643,8 @@
      "company": "Phoenix Systems",
      "email": "lucas.rodriguez@phoenixsystems.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 184,
@@ -1652,8 +1652,8 @@
      "company": "Stellar Corp",
      "email": "mia.williams@stellarcorp.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 185,
@@ -1661,8 +1661,8 @@
      "company": "Fusion Dynamics",
      "email": "henry.garcia@fusiondynamics.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 186,
@@ -1670,8 +1670,8 @@
      "company": "Nexus Industries",
      "email": "evelyn.jones@nexusindustries.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 187,
@@ -1679,8 +1679,8 @@
      "company": "Zenith Group",
      "email": "alexander.brown@zenithgroup.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 188,
@@ -1688,8 +1688,8 @@
      "company": "Titan Works",
      "email": "harper.davis@titanworks.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 189,
@@ -1697,8 +1697,8 @@
      "company": "Orion Labs",
      "email": "james.miller@orionlabs.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 190,
@@ -1706,8 +1706,8 @@
      "company": "Echo Innovations",
      "email": "sophia.wilson@echoinnovations.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 191,
@@ -1715,8 +1715,8 @@
      "company": "Pulse Technologies",
      "email": "benjamin.anderson@pulsetechnologies.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 192,
@@ -1724,8 +1724,8 @@
      "company": "Horizon Ventures",
      "email": "isabella.thomas@horizonventures.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    },
    {
      "id": 193,
@@ -1733,8 +1733,8 @@
      "company": "Summit Creations",
      "email": "william.taylor@summitcreations.com",
      "source": "Website",
-     "score": "Medium",
-     "status": "New"
+     "score": "medium",
+     "status": "new"
    },
    {
      "id": 194,
@@ -1742,8 +1742,8 @@
      "company": "Meridian Co.",
      "email": "amelia.moore@meridianco.com",
      "source": "Referral",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 195,
@@ -1751,8 +1751,8 @@
      "company": "Nova Enterprises",
      "email": "oliver.jackson@novaenterprises.com",
      "source": "Event",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 196,
@@ -1760,8 +1760,8 @@
      "company": "Celestial Systems",
      "email": "charlotte.martin@celestialsystems.com",
      "source": "Cold Call",
-     "score": "Low",
-     "status": "New"
+     "score": "low",
+     "status": "new"
    },
    {
      "id": 197,
@@ -1769,8 +1769,8 @@
      "company": "Apex Innovations",
      "email": "liam.johnson@apexinnovations.com",
      "source": "Advertisement",
-     "score": "Medium",
-     "status": "Converted"
+     "score": "medium",
+     "status": "converted"
    },
    {
      "id": 198,
@@ -1778,8 +1778,8 @@
      "company": "Quantum Dynamics",
      "email": "olivia.hernandez@quantumdynamics.com",
      "source": "Social Media",
-     "score": "Hot",
-     "status": "Contacted"
+     "score": "hot",
+     "status": "contacted"
    },
    {
      "id": 199,
@@ -1787,8 +1787,8 @@
      "company": "Fusion Labs",
      "email": "noah.lopez@fusionlabs.com",
      "source": "Partner",
-     "score": "High",
-     "status": "Qualified"
+     "score": "high",
+     "status": "qualified"
    },
    {
      "id": 200,
@@ -1796,8 +1796,8 @@
      "company": "Innovate Inc.",
      "email": "emma.gonzalez@innovateinc.com",
      "source": "Other",
-     "score": "Low",
-     "status": "Disqualified"
+     "score": "low",
+     "status": "disqualified"
    }
  ]
  

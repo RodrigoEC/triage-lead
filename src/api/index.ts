@@ -35,10 +35,10 @@ const saveLeadsToStorage = (data: Lead[]) => {
 };
 
 const scoreValues: Record<Lead["score"], number> = {
-  Hot: 4,
-  High: 3,
-  Medium: 2,
-  Low: 1,
+  hot: 4,
+  high: 3,
+  medium: 2,
+  low: 1,
 };
 
 /**
@@ -52,6 +52,8 @@ export const getLeads = (options: GetLeadsOptions = {}): Promise<Lead[]> => {
     setTimeout(() => {
       const { filters, sorting } = options;
       let result = [...leadsData];
+
+      console.log(filters)
 
       if (filters) {
         const nameRegex = filters.name
@@ -73,14 +75,13 @@ export const getLeads = (options: GetLeadsOptions = {}): Promise<Lead[]> => {
             (!filters.status || lead.status === filters.status)
         );
       }
-
       if (sorting?.score) {
         const direction = sorting.score === "asc" ? 1 : -1;
         result.sort(
           (a, b) => (scoreValues[a.score] - scoreValues[b.score]) * direction
         );
       }
-      resolve(result);
+      resolve(result); 
     }, randomTimeout);
   });
 };

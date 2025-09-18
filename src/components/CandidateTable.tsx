@@ -1,11 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 import { getLeads } from "../api";
 import { Candidate } from "./Candidate";
-import type { GetLeadsOptions, Lead } from "../util/interfaces";
+import type { GetLeadsOptions, Lead, SortOptions } from "../util/interfaces";
 import { debounce } from "../util";
 import { Icon } from "./Icon";
 import { TableHead } from "./TableHead";
 
+const DEFAULT_SORT = "none";
 
 
 export const CandidateTable = ({
@@ -18,6 +19,7 @@ export const CandidateTable = ({
   const [filters, setFilters] = useState<
     Partial<Pick<Lead, "name" | "company" | "email" | "status">>
   >({});
+  const [sorting, setSorting] = useState<SortOptions>(DEFAULT_SORT);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedGetLeads = useCallback(
@@ -43,6 +45,10 @@ export const CandidateTable = ({
     }));
   };
 
+  const handleSortChange = (field: SortOptions) => {
+    setSorting(field.toLocaleLowerCase() as SortOptions);
+  };
+
   useEffect(() => {
     const combinedFilters: GetLeadsOptions = {
       ...rootFilter,
@@ -51,8 +57,14 @@ export const CandidateTable = ({
         ...filters,
       },
     };
+
+    if (sorting !== DEFAULT_SORT) {
+      console.log("entering here", sorting)
+      combinedFilters.sorting = { score: sorting }
+    }
+
     debouncedGetLeads(combinedFilters);
-  }, [filters, rootFilter, debouncedGetLeads]);
+  }, [filters, rootFilter, debouncedGetLeads, sorting]);
   return (
     <div
       className={`${
@@ -60,7 +72,10 @@ export const CandidateTable = ({
       } w-full rounded-lg box-border`}
     >
       <table className="w-full divide-gray-200">
-        <TableHead onFilterChange={handleFilterChange} />
+        <TableHead
+          onFilterChange={handleFilterChange}
+          onSortChange={handleSortChange}
+        />
         {!loading && (
           <tbody className="w-full divide-y divide-gray-700">
             {leads.map((lead) => (

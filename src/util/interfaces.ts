@@ -19,6 +19,9 @@ export interface Lead {
   company: string;
   email: string;
   source: string;
-  score: 'Hot' | 'Medium' | 'High' | 'Low';
-  status: 'New' | 'Contacted' | 'Qualified' | 'Converted' | 'Disqualified';
+  score: 'hot' | 'medium' | 'high' | 'low';
+  status: 'new' | 'contacted' | 'qualified' | 'converted' | 'disqualified';
 }
+
+
+export type SortOptions = 'asc' | 'desc' | "none";

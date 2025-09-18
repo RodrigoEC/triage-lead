@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { updateLead } from "../api";
 import { Icon } from "./Icon";
-import { Status } from "./Status";
 import { Email } from "./Email";
 import type { Lead } from "../util/interfaces";
+import { Select } from "./Select";
+import { STATUS_OPTIONS } from "../util/constants";
 
 interface CandidateProps {
   lead: Lead;
@@ -49,10 +50,16 @@ export const Candidate = ({ lead }: CandidateProps) => {
         />
       </td>
       <td className="px-6 py-4 text-sm text-center">
-        <Status
-          candidate={currCandidate}
+        <Select
+          defaultValue={currCandidate.status}
           isEditing={isEditing}
-          onChange={setCurrCandidate}
+          options={STATUS_OPTIONS.filter((option) => option !== "converted")}
+          onChange={(status: string) =>
+            setCurrCandidate({
+              ...currCandidate,
+              status: status,
+            } as Lead)
+          }
         />
       </td>
       <td className="px-6 py-4 text-sm">{currCandidate.score}</td>
