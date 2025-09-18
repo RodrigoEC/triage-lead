@@ -6,7 +6,7 @@ function App() {
   const [leads, setLeads] = useState<Lead[]>([]);
 
   useEffect(() => {
-    setLeads(getLeads());
+    setLeads(getLeads({ filters: { company: "nterprises"}}));
   }, []);
 
   const handleUpdateLead = (id: number, updates: Partial<Omit<Lead, "id">>) => {

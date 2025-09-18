@@ -1,68 +1,74 @@
 import { useState } from "react";
-import type { Lead } from "../api";
+import { updateLead, type Lead } from "../api";
 import { Icon } from "./Icon";
+import { STATUS_OPTIONS } from "../util/constants";
 
 interface CandidateProps {
   lead: Lead;
-  onUpdate: (id: number, updates: Partial<Omit<Lead, "id">>) => void;
 }
 
-const statusOptions: Lead["status"][] = [
-  "New",
-  "Contacted",
-  "Qualified",
-  "Converted",
-  "Disqualified",
-];
-
-export const Candidate = ({ lead, onUpdate }: CandidateProps) => {
+export const Candidate = ({ lead }: CandidateProps) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [editedEmail, setEditedEmail] = useState(lead.email);
-  const [editedStatus, setEditedStatus] = useState(lead.status);
+  const [{ id, name, company, email, status, score }, setCurrentCandidate] =
+    useState(lead);
 
   const handleSave = () => {
-    // Basic email validation
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(editedEmail)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       alert("Please enter a valid email.");
       return;
     }
-    onUpdate(lead.id, { email: editedEmail, status: editedStatus });
+
+    updateLead(id, {
+      email: email,
+      status: status,
+    });
     setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setEditedEmail(lead.email);
-    setEditedStatus(lead.status);
+    setCurrentCandidate({
+      ...lead,
+      email: email,
+      status: status,
+    });
     setIsEditing(false);
   };
 
   return (
     <tr className="bg-white hover:bg-gray-50">
-      <td className="px-6 py-4 text-sm text-gray-900 text-start">{lead.name}</td>
-      <td className="px-6 py-4 text-sm text-start">{lead.company}</td>
+      <td className="px-6 py-4 text-sm text-gray-900 text-start">{name}</td>
+      <td className="px-6 py-4 text-sm text-start">{company}</td>
       <td className="px-6 py-4 text-sm text-start">
         {isEditing ? (
           <input
             type="email"
-            value={editedEmail}
-            onChange={(e) => setEditedEmail(e.target.value)}
+            value={email}
+            onChange={(e) =>
+              setCurrentCandidate({
+                ...{ id, name, company, status, score },
+                email: e.target.value,
+              } as Lead)
+            }
             className="block w-full border-b-1"
           />
         ) : (
-          lead.email
+          email
         )}
       </td>
       <td className="px-6 py-4 text-sm text-start">
         {isEditing ? (
           <div className="relative">
             <select
-              value={editedStatus}
+              value={status}
               onChange={(e) =>
-                setEditedStatus(e.target.value as Lead["status"])
+                setCurrentCandidate({
+                  ...{ id, name, company, email, score },
+                  status: e.target.value,
+                } as Lead)
               }
               className="cursor-pointer hover:bg-gray-200 rounded-lg transition duration-300 p-2 pr-6"
             >
-              {statusOptions.map((option) => (
+              {STATUS_OPTIONS.map((option) => (
                 <option key={option}>{option}</option>
               ))}
             </select>
@@ -71,10 +77,10 @@ export const Candidate = ({ lead, onUpdate }: CandidateProps) => {
             </div>
           </div>
         ) : (
-          <span className="p-2 pr-6">{lead.status}</span>
+          <span className="p-2 pr-6">{status}</span>
         )}
       </td>
-      <td className="px-6 py-4 text-sm">{lead.score}</td>
+      <td className="px-6 py-4 text-sm">{score}</td>
 
       <td className="flex gap-2 px-6 py-4 text-sm text-right font-medium w-[6rem]">
         {isEditing ? (

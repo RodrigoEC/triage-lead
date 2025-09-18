@@ -13,26 +13,85 @@ export interface Lead {
   status: 'New' | 'Contacted' | 'Qualified' | 'Converted' | 'Disqualified';
 }
 
-// In a real app, this would be a database. For this demo, we're using an
-// in-memory array initialized with data from the JSON file.
-let leadsData: Lead[] = [...leads];
+const LEADS_STORAGE_KEY = 'leadsData';
 
 /**
- * READ: Retrieves all leads.
+ * Initializes the leads data. It first tries to load from localStorage.
+ * If no data is found in localStorage, it falls back to the static JSON file
+ * and then saves this initial data to localStorage for future sessions.
  */
-export const getLeads = (): Lead[] => {
-  return leadsData;
+const initializeLeads = (): Lead[] => {
+  try {
+    const storedLeads = localStorage.getItem(LEADS_STORAGE_KEY);
+    if (storedLeads) {
+      return JSON.parse(storedLeads);
+    }
+  } catch (error) {
+    console.error("Error reading from localStorage:", error);
+  }
+
+  const initialData: Lead[]= [...leads as Lead[]];
+
+  try {
+    localStorage.setItem(LEADS_STORAGE_KEY, JSON.stringify(initialData));
+  } catch (error) {
+    console.error("Error writing to localStorage:", error);
+  }
+  return initialData;
+};
+
+let leadsData: Lead[] = initializeLeads();
+
+const saveLeadsToStorage = (data: Lead[]) => {
+  localStorage.setItem(LEADS_STORAGE_KEY, JSON.stringify(data));
+};
+
+interface GetLeadsOptions {
+  filters?: {
+    status?: Lead['status'];
+    email?: string;
+    name?: string;
+    company?: string;
+  };
+  sorting?: {
+    score?: 'asc' | 'desc';
+  };
+}
+
+const scoreValues: Record<Lead['score'], number> = {
+  Hot: 4,
+  High: 3,
+  Medium: 2,
+  Low: 1,
 };
 
 /**
- * CREATE: Adds a new lead to the dataset.
- * @param newLeadData - The lead data to add, without an 'id'.
+ * READ: Retrieves all leads, with optional filtering and sorting.
+ * @param options - An object with optional filters and sorting parameters.
  */
-export const createLead = (newLeadData: Omit<Lead, 'id'>): Lead => {
-  const newId = leadsData.length > 0 ? Math.max(...leadsData.map(l => l.id)) + 1 : 1;
-  const newLead: Lead = { id: newId, ...newLeadData };
-  leadsData.push(newLead);
-  return newLead;
+export const getLeads = (options: GetLeadsOptions = {}): Lead[] => {
+  const { filters, sorting } = options;
+  let result = [...leadsData];
+
+  if (filters) {
+    const nameRegex = filters.name ? new RegExp(filters.name) : null
+    const emailRegex = filters.email ? new RegExp(filters.email) : null
+    const companyRegex = filters.company ? new RegExp(filters.company) : null
+
+    result = result.filter(lead =>
+      (!nameRegex || nameRegex.test(lead.name)) &&
+      (!emailRegex || emailRegex.test(lead.email)) &&
+      (!companyRegex || companyRegex.test(lead.company)) &&
+      (!filters.status || lead.status === filters.status)
+    );
+  }
+
+  if (sorting?.score) {
+    const direction = sorting.score === 'asc' ? 1 : -1;
+    result.sort((a, b) => (scoreValues[a.score] - scoreValues[b.score]) * direction);
+  }
+
+  return result;
 };
 
 /**
@@ -44,17 +103,11 @@ export const updateLead = (id: number, updates: Partial<Omit<Lead, 'id'>>): Lead
   const leadIndex = leadsData.findIndex(lead => lead.id === id);
   if (leadIndex === -1) return undefined;
 
+  const tempLeads = [...leadsData];
   const updatedLead = { ...leadsData[leadIndex], ...updates };
-  leadsData[leadIndex] = updatedLead;
-  return updatedLead;
-};
+  tempLeads[leadIndex] = updatedLead;
+  leadsData = tempLeads;
 
-/**
- * DELETE: Removes a lead from the dataset by its ID.
- * @param id - The ID of the lead to delete.
- */
-export const deleteLead = (id: number): boolean => {
-  const initialLength = leadsData.length;
-  leadsData = leadsData.filter(lead => lead.id !== id);
-  return leadsData.length < initialLength;
+  saveLeadsToStorage(leadsData);
+  return updatedLead;
 };
