@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { updateLead, type Lead } from "../api";
+import { updateLead } from "../api";
 import { Icon } from "./Icon";
-import { STATUS_OPTIONS } from "../util/constants";
+import { Status } from "./Status";
+import { Email } from "./Email";
+import type { Lead } from "../util/interfaces";
 
 interface CandidateProps {
   lead: Lead;
@@ -9,79 +11,51 @@ interface CandidateProps {
 
 export const Candidate = ({ lead }: CandidateProps) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [{ id, name, company, email, status, score }, setCurrentCandidate] =
-    useState(lead);
+  const [currCandidate, setCurrCandidate] = useState(lead);
 
   const handleSave = () => {
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(currCandidate.email)) {
       alert("Please enter a valid email.");
       return;
     }
 
-    updateLead(id, {
-      email: email,
-      status: status,
+    updateLead(currCandidate.id, {
+      email: currCandidate.email,
+      status: currCandidate.status,
     });
     setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setCurrentCandidate({
+    setCurrCandidate({
       ...lead,
-      email: email,
-      status: status,
+      email: currCandidate.email,
+      status: currCandidate.status,
     });
     setIsEditing(false);
   };
 
   return (
     <tr className="bg-white hover:bg-gray-50">
-      <td className="px-6 py-4 text-sm text-gray-900 text-start">{name}</td>
-      <td className="px-6 py-4 text-sm text-start">{company}</td>
+      <td className="px-6 py-4 text-sm text-gray-900 text-start">
+        {currCandidate.name}
+      </td>
+      <td className="px-6 py-4 text-sm text-start">{currCandidate.company}</td>
       <td className="px-6 py-4 text-sm text-start">
-        {isEditing ? (
-          <input
-            type="email"
-            value={email}
-            onChange={(e) =>
-              setCurrentCandidate({
-                ...{ id, name, company, status, score },
-                email: e.target.value,
-              } as Lead)
-            }
-            className="block w-full border-b-1"
-          />
-        ) : (
-          email
-        )}
+        <Email
+          candidate={currCandidate}
+          isEditing={isEditing}
+          onChange={setCurrCandidate}
+        />
       </td>
       <td className="px-6 py-4 text-sm text-start">
-        {isEditing ? (
-          <div className="relative">
-            <select
-              value={status}
-              onChange={(e) =>
-                setCurrentCandidate({
-                  ...{ id, name, company, email, score },
-                  status: e.target.value,
-                } as Lead)
-              }
-              className="cursor-pointer hover:bg-gray-200 rounded-lg transition duration-300 p-2 pr-6"
-            >
-              {STATUS_OPTIONS.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <Icon id="expand" size={10} />
-            </div>
-          </div>
-        ) : (
-          <span className="p-2 pr-6">{status}</span>
-        )}
+        <Status
+          candidate={currCandidate}
+          isEditing={isEditing}
+          onChange={setCurrCandidate}
+        />
       </td>
-      <td className="px-6 py-4 text-sm">{score}</td>
-
+      <td className="px-6 py-4 text-sm">{currCandidate.score}</td>
       <td className="flex gap-2 px-6 py-4 text-sm text-right font-medium w-[6rem]">
         {isEditing ? (
           <>

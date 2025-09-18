@@ -1,19 +1,7 @@
-import leads from './leads.json';
+import type { GetLeadsOptions, Lead } from "../util/interfaces";
+import leads from "./leads.json";
 
-/**
- * Defines the structure of a Lead object for type safety.
- */
-export interface Lead {
-  id: number;
-  name: string;
-  company: string;
-  email: string;
-  source: string;
-  score: 'Hot' | 'Medium' | 'High' | 'Low';
-  status: 'New' | 'Contacted' | 'Qualified' | 'Converted' | 'Disqualified';
-}
-
-const LEADS_STORAGE_KEY = 'leadsData';
+const LEADS_STORAGE_KEY = "leadsData";
 
 /**
  * Initializes the leads data. It first tries to load from localStorage.
@@ -30,7 +18,7 @@ const initializeLeads = (): Lead[] => {
     console.error("Error reading from localStorage:", error);
   }
 
-  const initialData: Lead[]= [...leads as Lead[]];
+  const initialData: Lead[] = [...(leads as Lead[])];
 
   try {
     localStorage.setItem(LEADS_STORAGE_KEY, JSON.stringify(initialData));
@@ -46,19 +34,7 @@ const saveLeadsToStorage = (data: Lead[]) => {
   localStorage.setItem(LEADS_STORAGE_KEY, JSON.stringify(data));
 };
 
-interface GetLeadsOptions {
-  filters?: {
-    status?: Lead['status'];
-    email?: string;
-    name?: string;
-    company?: string;
-  };
-  sorting?: {
-    score?: 'asc' | 'desc';
-  };
-}
-
-const scoreValues: Record<Lead['score'], number> = {
+const scoreValues: Record<Lead["score"], number> = {
   Hot: 4,
   High: 3,
   Medium: 2,
@@ -69,29 +45,44 @@ const scoreValues: Record<Lead['score'], number> = {
  * READ: Retrieves all leads, with optional filtering and sorting.
  * @param options - An object with optional filters and sorting parameters.
  */
-export const getLeads = (options: GetLeadsOptions = {}): Lead[] => {
-  const { filters, sorting } = options;
-  let result = [...leadsData];
+export const getLeads = (options: GetLeadsOptions = {}): Promise<Lead[]> => {
+  return new Promise((resolve) => {
+    const randomTimeout = Math.random() * 2000 + 1000;
 
-  if (filters) {
-    const nameRegex = filters.name ? new RegExp(filters.name) : null
-    const emailRegex = filters.email ? new RegExp(filters.email) : null
-    const companyRegex = filters.company ? new RegExp(filters.company) : null
+    setTimeout(() => {
+      const { filters, sorting } = options;
+      let result = [...leadsData];
 
-    result = result.filter(lead =>
-      (!nameRegex || nameRegex.test(lead.name)) &&
-      (!emailRegex || emailRegex.test(lead.email)) &&
-      (!companyRegex || companyRegex.test(lead.company)) &&
-      (!filters.status || lead.status === filters.status)
-    );
-  }
+      if (filters) {
+        const nameRegex = filters.name
+          ? new RegExp(filters.name.toLocaleLowerCase())
+          : null;
+        const emailRegex = filters.email
+          ? new RegExp(filters.email.toLocaleLowerCase())
+          : null;
+        const companyRegex = filters.company
+          ? new RegExp(filters.company.toLocaleLowerCase())
+          : null;
 
-  if (sorting?.score) {
-    const direction = sorting.score === 'asc' ? 1 : -1;
-    result.sort((a, b) => (scoreValues[a.score] - scoreValues[b.score]) * direction);
-  }
+        result = result.filter(
+          (lead) =>
+            (!nameRegex || nameRegex.test(lead.name.toLocaleLowerCase())) &&
+            (!emailRegex || emailRegex.test(lead.email.toLocaleLowerCase())) &&
+            (!companyRegex ||
+              companyRegex.test(lead.company.toLocaleLowerCase())) &&
+            (!filters.status || lead.status === filters.status)
+        );
+      }
 
-  return result;
+      if (sorting?.score) {
+        const direction = sorting.score === "asc" ? 1 : -1;
+        result.sort(
+          (a, b) => (scoreValues[a.score] - scoreValues[b.score]) * direction
+        );
+      }
+      resolve(result);
+    }, randomTimeout);
+  });
 };
 
 /**
@@ -99,8 +90,11 @@ export const getLeads = (options: GetLeadsOptions = {}): Lead[] => {
  * @param id - The ID of the lead to update.
  * @param updates - An object with the properties to update.
  */
-export const updateLead = (id: number, updates: Partial<Omit<Lead, 'id'>>): Lead | undefined => {
-  const leadIndex = leadsData.findIndex(lead => lead.id === id);
+export const updateLead = (
+  id: number,
+  updates: Partial<Omit<Lead, "id">>
+): Lead | undefined => {
+  const leadIndex = leadsData.findIndex((lead) => lead.id === id);
   if (leadIndex === -1) return undefined;
 
   const tempLeads = [...leadsData];
