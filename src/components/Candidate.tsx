@@ -1,0 +1,116 @@
+import { useState } from "react";
+import type { Lead } from "../api";
+import { Icon } from "./Icon";
+
+interface CandidateProps {
+  lead: Lead;
+  onUpdate: (id: number, updates: Partial<Omit<Lead, "id">>) => void;
+}
+
+const statusOptions: Lead["status"][] = [
+  "New",
+  "Contacted",
+  "Qualified",
+  "Converted",
+  "Disqualified",
+];
+
+export const Candidate = ({ lead, onUpdate }: CandidateProps) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedEmail, setEditedEmail] = useState(lead.email);
+  const [editedStatus, setEditedStatus] = useState(lead.status);
+
+  const handleSave = () => {
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(editedEmail)) {
+      alert("Please enter a valid email.");
+      return;
+    }
+    onUpdate(lead.id, { email: editedEmail, status: editedStatus });
+    setIsEditing(false);
+  };
+
+  const handleCancel = () => {
+    setEditedEmail(lead.email);
+    setEditedStatus(lead.status);
+    setIsEditing(false);
+  };
+
+  return (
+    <tr className="bg-white hover:bg-gray-50">
+      <td className="px-6 py-4 text-sm text-gray-900 text-start">{lead.name}</td>
+      <td className="px-6 py-4 text-sm text-start">{lead.company}</td>
+      <td className="px-6 py-4 text-sm text-start">
+        {isEditing ? (
+          <input
+            type="email"
+            value={editedEmail}
+            onChange={(e) => setEditedEmail(e.target.value)}
+            className="block w-full border-b-1"
+          />
+        ) : (
+          lead.email
+        )}
+      </td>
+      <td className="px-6 py-4 text-sm text-start">
+        {isEditing ? (
+          <div className="relative">
+            <select
+              value={editedStatus}
+              onChange={(e) =>
+                setEditedStatus(e.target.value as Lead["status"])
+              }
+              className="cursor-pointer hover:bg-gray-200 rounded-lg transition duration-300 p-2 pr-6"
+            >
+              {statusOptions.map((option) => (
+                <option key={option}>{option}</option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <Icon id="expand" size={10} />
+            </div>
+          </div>
+        ) : (
+          <span className="p-2 pr-6">{lead.status}</span>
+        )}
+      </td>
+      <td className="px-6 py-4 text-sm">{lead.score}</td>
+
+      <td className="flex gap-2 px-6 py-4 text-sm text-right font-medium w-[6rem]">
+        {isEditing ? (
+          <>
+            <button
+              onClick={handleSave}
+              className="cursor-pointer p-2 text-green-700"
+              title="Save"
+            >
+              <Icon id="check" size={18} />
+            </button>
+            <button
+              onClick={handleCancel}
+              className="cursor-pointer p-2 text-red-700"
+              title="Cancel"
+            >
+              <Icon id="cancel" size={15} />
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              onClick={() => setIsEditing(true)}
+              className="cursor-pointer p-2"
+              title="Edit"
+            >
+              <Icon id="edit" size={18} />
+            </button>
+          </>
+        )}
+      </td>
+      <td className="px-6 py-4 text-sm">
+        <button className="cursor-pointer p-2">
+          <Icon id="approved" size={20} />
+        </button>
+      </td>
+    </tr>
+  );
+};
