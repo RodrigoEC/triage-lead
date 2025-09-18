@@ -15,13 +15,16 @@ export const TableHead = ({
   text: string;
   onFilterChange?: (field: string, value: string) => void;
 }) => {
-  const isFilterable = ["name", "company", "email"].includes(text.toLowerCase());
-  console.log(pos, text)
+  const isFilterable = ["name", "company", "email"].includes(
+    text.toLowerCase()
+  );
+
   return (
     <th
       scope="col"
       className={`${
-        pos === 0 && "sticky left-0 bg-green-950 z-10 border-r-1 lg:border-r-0 border-r-green-950"
+        pos === 0 &&
+        "sticky left-0 bg-green-950 z-10 border-r-1 lg:border-r-0 border-r-green-950"
       } px-6 py-3 text-left text-xs text-gray-400 uppercase`}
     >
       {isFilterable && onFilterChange ? (
@@ -29,7 +32,7 @@ export const TableHead = ({
           type="text"
           placeholder={`${text.toLocaleUpperCase()}`}
           onChange={(e) => onFilterChange(text.toLowerCase(), e.target.value)}
-          className="w-full mt-1 pb-1 border-b-1 placeholder-gray-400"
+          className="w-full min-w-[100px] mt-1 pb-1 border-b-1 placeholder-gray-400"
         />
       ) : (
         text
@@ -84,7 +87,11 @@ export const CandidateTable = ({
     debouncedGetLeads(combinedFilters);
   }, [filters, rootFilter, debouncedGetLeads]);
   return (
-    <div className="w-full rounded-lg box-border overflow-x-scroll">
+    <div
+      className={`${
+        leads.length ? "overflow-x-scroll" : "overflow-x-hidden"
+      } w-full rounded-lg box-border`}
+    >
       <table className="w-full divide-gray-200">
         <thead className="w-full bg-green-950">
           <tr className="w-full">
