@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLeads, updateLead, type Lead } from "./api";
+import { getLeads, type Lead } from "./api";
 import { Candidate } from "./components/Candidate";
 
 function App() {
@@ -8,15 +8,6 @@ function App() {
   useEffect(() => {
     setLeads(getLeads({ filters: { company: "nterprises"}}));
   }, []);
-
-  const handleUpdateLead = (id: number, updates: Partial<Omit<Lead, "id">>) => {
-    const updatedLead = updateLead(id, updates);
-    if (updatedLead) {
-      setLeads((currentLeads) =>
-        currentLeads.map((l) => (l.id === id ? updatedLead : l))
-      );
-    }
-  };
 
   return (
     <>
@@ -75,7 +66,6 @@ function App() {
                 <Candidate
                   key={lead.id}
                   lead={lead}
-                  onUpdate={handleUpdateLead}
                 />
               ))}
             </tbody>
