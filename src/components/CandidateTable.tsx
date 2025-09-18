@@ -4,27 +4,32 @@ import { Candidate } from "./Candidate";
 import { TABLE_HEADERS } from "../util/constants";
 import type { GetLeadsOptions, Lead } from "../util/interfaces";
 import { debounce } from "../util";
+import { Icon } from "./Icon";
 
 export const TableHead = ({
+  pos,
   text,
   onFilterChange,
 }: {
+  pos: number;
   text: string;
   onFilterChange?: (field: string, value: string) => void;
 }) => {
-  const isFilterable = ["name", "company", "email"].includes(text);
-
+  const isFilterable = ["name", "company", "email"].includes(text.toLowerCase());
+  console.log(pos, text)
   return (
     <th
       scope="col"
-      className="px-6 py-3 text-left text-xs text-gray-400 uppercase"
+      className={`${
+        pos === 0 && "sticky left-0 bg-green-950 z-10 border-r-1 lg:border-r-0 border-r-green-950"
+      } px-6 py-3 text-left text-xs text-gray-400 uppercase`}
     >
       {isFilterable && onFilterChange ? (
         <input
           type="text"
           placeholder={`${text.toLocaleUpperCase()}`}
           onChange={(e) => onFilterChange(text.toLowerCase(), e.target.value)}
-          className="w-full mt-1 pb-1 border-b-1"
+          className="w-full mt-1 pb-1 border-b-1 placeholder-gray-400"
         />
       ) : (
         text
@@ -39,6 +44,7 @@ export const CandidateTable = ({
   rootFilter?: GetLeadsOptions;
 }) => {
   const [leads, setLeads] = useState<Lead[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [filters, setFilters] = useState<
     Partial<Pick<Lead, "name" | "company" | "email">>
   >({});
@@ -46,8 +52,10 @@ export const CandidateTable = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedGetLeads = useCallback(
     debounce(async (currentFilters: GetLeadsOptions) => {
+      setLoading(true);
       setLeads(await getLeads(currentFilters));
-    }, 300),
+      setLoading(false);
+    }, 750),
     []
   );
 
@@ -64,7 +72,7 @@ export const CandidateTable = ({
       [field]: value,
     }));
   };
-  
+
   useEffect(() => {
     const combinedFilters: GetLeadsOptions = {
       ...rootFilter,
@@ -76,23 +84,39 @@ export const CandidateTable = ({
     debouncedGetLeads(combinedFilters);
   }, [filters, rootFilter, debouncedGetLeads]);
   return (
-    <table className="w-full divide-gray-200">
-      <thead className="w-full bg-gray-50 dark:bg-gray-800">
-        <tr className="w-full">
-          {TABLE_HEADERS.map((header) => (
-            <TableHead
-              key={header}
-              text={header}
-              onFilterChange={handleFilterChange}
-            />
-          ))}
-        </tr>
-      </thead>
-      <tbody className="w-full bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
-        {leads.map((lead) => (
-          <Candidate key={lead.id} lead={lead} />
-        ))}
-      </tbody>
-    </table>
+    <div className="w-full rounded-lg box-border overflow-x-scroll">
+      <table className="w-full divide-gray-200">
+        <thead className="w-full bg-green-950">
+          <tr className="w-full">
+            {TABLE_HEADERS.map((header, index) => (
+              <TableHead
+                key={index}
+                pos={index}
+                text={header}
+                onFilterChange={handleFilterChange}
+              />
+            ))}
+          </tr>
+        </thead>
+        {!loading && (
+          <tbody className="w-full divide-y divide-gray-700">
+            {leads.map((lead) => (
+              <Candidate key={lead.id} lead={lead} />
+            ))}
+          </tbody>
+        )}
+      </table>
+      {loading && (
+        <div className="w-full h-52 flex flex-col items-center justify-center border-1 border-gray-200 rounded-b-lg text-gray-400">
+          <Icon id="loading" size={40} className="animate-spin" />
+          <p className="mt-4 uppercase text-sm">Loading...</p>
+        </div>
+      )}
+      {!loading && !leads.length && (
+        <div className="w-full h-52 flex flex-col items-center justify-center border-1 border-gray-200 rounded-b-lg text-gray-400">
+          <p>No Lead Found</p>
+        </div>
+      )}
+    </div>
   );
 };

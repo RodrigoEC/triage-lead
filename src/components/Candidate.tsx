@@ -36,8 +36,8 @@ export const Candidate = ({ lead }: CandidateProps) => {
   };
 
   return (
-    <tr className="bg-white hover:bg-gray-50">
-      <td className="px-6 py-4 text-sm text-gray-900 text-start">
+    <tr className="group bg-white hover:bg-gray-50">
+      <td className="shadow-2xl lg:shadow-none box-border sticky left-0 z-10 bg-white px-6 py-4 text-sm text-gray-900 text-start group-hover:bg-gray-50">
         {currCandidate.name}
       </td>
       <td className="px-6 py-4 text-sm text-start">{currCandidate.company}</td>
@@ -48,7 +48,7 @@ export const Candidate = ({ lead }: CandidateProps) => {
           onChange={setCurrCandidate}
         />
       </td>
-      <td className="px-6 py-4 text-sm text-start">
+      <td className="px-6 py-4 text-sm text-center">
         <Status
           candidate={currCandidate}
           isEditing={isEditing}
