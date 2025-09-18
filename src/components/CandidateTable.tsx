@@ -1,45 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 import { getLeads } from "../api";
 import { Candidate } from "./Candidate";
-import { TABLE_HEADERS } from "../util/constants";
 import type { GetLeadsOptions, Lead } from "../util/interfaces";
 import { debounce } from "../util";
 import { Icon } from "./Icon";
+import { TableHead } from "./TableHead";
 
-export const TableHead = ({
-  pos,
-  text,
-  onFilterChange,
-}: {
-  pos: number;
-  text: string;
-  onFilterChange?: (field: string, value: string) => void;
-}) => {
-  const isFilterable = ["name", "company", "email"].includes(
-    text.toLowerCase()
-  );
 
-  return (
-    <th
-      scope="col"
-      className={`${
-        pos === 0 &&
-        "sticky left-0 bg-green-950 z-10 border-r-1 lg:border-r-0 border-r-green-950"
-      } px-6 py-3 text-left text-xs text-gray-400 uppercase`}
-    >
-      {isFilterable && onFilterChange ? (
-        <input
-          type="text"
-          placeholder={`${text.toLocaleUpperCase()}`}
-          onChange={(e) => onFilterChange(text.toLowerCase(), e.target.value)}
-          className="w-full min-w-[100px] mt-1 pb-1 border-b-1 placeholder-gray-400"
-        />
-      ) : (
-        text
-      )}
-    </th>
-  );
-};
 
 export const CandidateTable = ({
   rootFilter,
@@ -49,7 +16,7 @@ export const CandidateTable = ({
   const [leads, setLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [filters, setFilters] = useState<
-    Partial<Pick<Lead, "name" | "company" | "email">>
+    Partial<Pick<Lead, "name" | "company" | "email" | "status">>
   >({});
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -93,18 +60,7 @@ export const CandidateTable = ({
       } w-full rounded-lg box-border`}
     >
       <table className="w-full divide-gray-200">
-        <thead className="w-full bg-green-950">
-          <tr className="w-full">
-            {TABLE_HEADERS.map((header, index) => (
-              <TableHead
-                key={index}
-                pos={index}
-                text={header}
-                onFilterChange={handleFilterChange}
-              />
-            ))}
-          </tr>
-        </thead>
+        <TableHead onFilterChange={handleFilterChange} />
         {!loading && (
           <tbody className="w-full divide-y divide-gray-700">
             {leads.map((lead) => (

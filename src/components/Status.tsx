@@ -23,7 +23,7 @@ export const Status = ({
         }
         className="cursor-pointer hover:bg-gray-200 rounded-lg transition duration-300 p-2 pr-6"
       >
-        {STATUS_OPTIONS.map((option) => (
+        {STATUS_OPTIONS.filter(option => option !== "Converted").map((option) => (
           <option key={option}>{option}</option>
         ))}
       </select>
