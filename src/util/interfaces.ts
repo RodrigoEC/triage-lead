@@ -8,6 +8,10 @@ export interface GetLeadsOptions {
   sorting?: {
     score?: 'asc' | 'desc';
   };
+  pagination?: {
+    page: number;
+    limit: number;
+  };
 }
 
 /**
@@ -23,5 +27,10 @@ export interface Lead {
   status: 'new' | 'contacted' | 'qualified' | 'converted' | 'disqualified';
 }
 
+export interface GetLeadsResponse {
+  leads: Lead[];
+  total: number;
+}
 
-export type SortOptions = 'asc' | 'desc' | "none";
+
+export type SortOptions = 'asc' | 'desc' | "unsorted";

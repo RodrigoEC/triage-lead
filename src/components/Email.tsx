@@ -19,7 +19,7 @@ export const Email = ({
           email: e.target.value,
         } as Lead)
       }
-      className="block w-full border-b-1"
+      className="block w-full border-b-1 mt-1 pb-1"
     />
   ) : (
     candidate.email

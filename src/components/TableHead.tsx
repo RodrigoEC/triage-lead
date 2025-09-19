@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { DEFAULT_STATUS, SORT_OPTIONS, STATUS_OPTIONS } from "../util/constants";
+import { DEFAULT_SORT, DEFAULT_STATUS, SORT_OPTIONS, STATUS_OPTIONS } from "../util/constants";
 import type { SortOptions } from "../util/interfaces";
 import { Input } from "./Input";
 import { Select } from "./Select";
@@ -35,7 +35,7 @@ export const TableHead = ({
     score: {
       component: () => (
         <Select
-          defaultValue="none"
+          defaultValue={DEFAULT_SORT}
           options={SORT_OPTIONS.map((option) => option)}
           onChange={(val) => onSortChange(val.toLocaleLowerCase() as SortOptions)}
         />

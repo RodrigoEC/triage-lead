@@ -1,4 +1,4 @@
-import type { GetLeadsOptions, Lead } from "../util/interfaces";
+import type { GetLeadsOptions, GetLeadsResponse, Lead } from "../util/interfaces";
 import leads from "./leads.json";
 
 const LEADS_STORAGE_KEY = "leadsData";
@@ -45,12 +45,12 @@ const scoreValues: Record<Lead["score"], number> = {
  * READ: Retrieves all leads, with optional filtering and sorting.
  * @param options - An object with optional filters and sorting parameters.
  */
-export const getLeads = (options: GetLeadsOptions = {}): Promise<Lead[]> => {
+export const getLeads = (options: GetLeadsOptions = {}): Promise<GetLeadsResponse> => {
   return new Promise((resolve) => {
     const randomTimeout = Math.random() * 500 + 500;
 
     setTimeout(() => {
-      const { filters, sorting } = options;
+      const { filters, sorting, pagination } = options;
       let result = [...leadsData];
 
       console.log(filters)
@@ -81,7 +81,17 @@ export const getLeads = (options: GetLeadsOptions = {}): Promise<Lead[]> => {
           (a, b) => (scoreValues[a.score] - scoreValues[b.score]) * direction
         );
       }
-      resolve(result); 
+
+      const total = result.length;
+
+      if (pagination) {
+        const { page, limit } = pagination;
+        const start = (page - 1) * limit;
+        const end = start + limit;
+        result = result.slice(start, end);
+      }
+
+      resolve({ leads: result, total });
     }, randomTimeout);
   });
 };

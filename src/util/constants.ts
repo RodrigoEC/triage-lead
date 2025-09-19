@@ -8,9 +8,10 @@ export const STATUS_OPTIONS: Lead["status"][] = [
   "disqualified",
 ];
 
+export const DEFAULT_SORT = "unsorted";
 
-export const SORT_OPTIONS = ["asc", "desc", "none"];
+export const SORT_OPTIONS = ["asc", "desc", DEFAULT_SORT];
 
 export const DEFAULT_STATUS = "all";
 
-export const DEFAULT_SORT = "none";
+export const LEADS_PER_PAGE = 10;
