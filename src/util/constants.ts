@@ -1,6 +1,6 @@
-import type { Lead } from "./interfaces";
+import type { ILead } from "./interfaces";
 
-export const STATUS_OPTIONS: Lead["status"][] = [
+export const STATUS_OPTIONS: ILead["status"][] = [
   "new",
   "contacted",
   "qualified",

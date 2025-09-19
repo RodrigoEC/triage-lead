@@ -1,27 +1,27 @@
-import type { Lead } from "../util/interfaces";
+import type { ILead } from "../util/interfaces";
 
 export const Email = ({
-  candidate,
+  lead,
   isEditing,
   onChange,
 }: {
-  candidate: Lead;
+  lead: ILead;
   isEditing: boolean;
-  onChange: (candidate: Lead) => void;
+  onChange: (lead: ILead) => void;
 }) => {
   return isEditing ? (
     <input
       type="email"
-      value={candidate.email}
+      value={lead.email}
       onChange={(e) =>
         onChange({
-          ...candidate,
+          ...lead,
           email: e.target.value,
-        } as Lead)
+        } as ILead)
       }
       className="block w-full border-b-1 mt-1 pb-1"
     />
   ) : (
-    candidate.email
+    lead.email
   );
 };

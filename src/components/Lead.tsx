@@ -2,36 +2,36 @@ import { useState } from "react";
 import { updateLead } from "../api";
 import { Icon } from "./Icon";
 import { Email } from "./Email";
-import type { Lead } from "../util/interfaces";
+import type { ILead } from "../util/interfaces";
 import { Select } from "./Select";
 import { STATUS_OPTIONS } from "../util/constants";
 
-interface CandidateProps {
-  lead: Lead;
+interface LeadProps {
+  lead: ILead;
 }
 
-export const Candidate = ({ lead }: CandidateProps) => {
+export const Lead = ({ lead }: LeadProps) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [currCandidate, setCurrCandidate] = useState(lead);
+  const [currLead, setCurrLead] = useState(lead);
 
   const handleSave = () => {
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(currCandidate.email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(currLead.email)) {
       alert("Please enter a valid email.");
       return;
     }
 
-    updateLead(currCandidate.id, {
-      email: currCandidate.email,
-      status: currCandidate.status,
+    updateLead(currLead.id, {
+      email: currLead.email,
+      status: currLead.status,
     });
     setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setCurrCandidate({
+    setCurrLead({
       ...lead,
-      email: currCandidate.email,
-      status: currCandidate.status,
+      email: currLead.email,
+      status: currLead.status,
     });
     setIsEditing(false);
   };
@@ -39,30 +39,30 @@ export const Candidate = ({ lead }: CandidateProps) => {
   return (
     <tr className="group bg-white hover:bg-gray-50">
       <td className="shadow-2xl lg:shadow-none box-border sticky left-0 z-10 bg-white px-6 py-4 text-sm text-gray-900 text-start group-hover:bg-gray-50">
-        {currCandidate.name}
+        {currLead.name}
       </td>
-      <td className="px-6 py-4 text-sm text-start">{currCandidate.company}</td>
+      <td className="px-6 py-4 text-sm text-start">{currLead.company}</td>
       <td className="px-6 py-4 text-sm text-start">
         <Email
-          candidate={currCandidate}
+          lead={currLead}
           isEditing={isEditing}
-          onChange={setCurrCandidate}
+          onChange={setCurrLead}
         />
       </td>
       <td className="px-6 py-4 text-sm text-center">
         <Select
-          defaultValue={currCandidate.status}
+          defaultValue={currLead.status}
           isEditing={isEditing}
           options={STATUS_OPTIONS.filter((option) => option !== "converted")}
           onChange={(status: string) =>
-            setCurrCandidate({
-              ...currCandidate,
+            setCurrLead({
+              ...currLead,
               status: status,
-            } as Lead)
+            } as ILead)
           }
         />
       </td>
-      <td className="px-6 py-4 text-sm">{currCandidate.score}</td>
+      <td className="px-6 py-4 text-sm">{currLead.score}</td>
       <td className="flex gap-2 px-6 py-4 text-sm text-right font-medium w-[6rem]">
         {isEditing ? (
           <>

@@ -1,4 +1,4 @@
-import { CandidateTable } from "./components/CandidateTable";
+import { LeadTable } from "./components/LeadTable";
 
 function App() {
   return (
@@ -11,11 +11,11 @@ function App() {
           src="/uitify.png"
           className="w-44 h-44"
         />
-        <h1 className="text-4xl font-bold">Uitify candidates selection</h1>
+        <h1 className="text-4xl font-bold">Mini Seller Console</h1>
       </div>
       <div>
         <h2 className="text-3xl font-bold mb-4 text-left">Leads</h2>
-        <CandidateTable />
+        <LeadTable />
       </div>
     </div>
   );

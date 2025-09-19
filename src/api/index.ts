@@ -1,4 +1,4 @@
-import type { GetLeadsOptions, GetLeadsResponse, Lead } from "../util/interfaces";
+import type { GetLeadsOptions, GetLeadsResponse, ILead } from "../util/interfaces";
 import leads from "./leads.json";
 
 const LEADS_STORAGE_KEY = "leadsData";
@@ -8,7 +8,7 @@ const LEADS_STORAGE_KEY = "leadsData";
  * If no data is found in localStorage, it falls back to the static JSON file
  * and then saves this initial data to localStorage for future sessions.
  */
-const initializeLeads = (): Lead[] => {
+const initializeLeads = (): ILead[] => {
   try {
     const storedLeads = localStorage.getItem(LEADS_STORAGE_KEY);
     if (storedLeads) {
@@ -18,7 +18,7 @@ const initializeLeads = (): Lead[] => {
     console.error("Error reading from localStorage:", error);
   }
 
-  const initialData: Lead[] = [...(leads as Lead[])];
+  const initialData: ILead[] = [...(leads as ILead[])];
 
   try {
     localStorage.setItem(LEADS_STORAGE_KEY, JSON.stringify(initialData));
@@ -28,17 +28,10 @@ const initializeLeads = (): Lead[] => {
   return initialData;
 };
 
-let leadsData: Lead[] = initializeLeads();
+let leadsData: ILead[] = initializeLeads();
 
-const saveLeadsToStorage = (data: Lead[]) => {
+const saveLeadsToStorage = (data: ILead[]) => {
   localStorage.setItem(LEADS_STORAGE_KEY, JSON.stringify(data));
-};
-
-const scoreValues: Record<Lead["score"], number> = {
-  hot: 4,
-  high: 3,
-  medium: 2,
-  low: 1,
 };
 
 /**
@@ -77,9 +70,7 @@ export const getLeads = (options: GetLeadsOptions = {}): Promise<GetLeadsRespons
       }
       if (sorting?.score) {
         const direction = sorting.score === "asc" ? 1 : -1;
-        result.sort(
-          (a, b) => (scoreValues[a.score] - scoreValues[b.score]) * direction
-        );
+        result.sort((a, b) => (a.score - b.score) * direction);
       }
 
       const total = result.length;
@@ -103,8 +94,8 @@ export const getLeads = (options: GetLeadsOptions = {}): Promise<GetLeadsRespons
  */
 export const updateLead = (
   id: number,
-  updates: Partial<Omit<Lead, "id">>
-): Lead | undefined => {
+  updates: Partial<Omit<ILead, "id">>
+): ILead | undefined => {
   const leadIndex = leadsData.findIndex((lead) => lead.id === id);
   if (leadIndex === -1) return undefined;
 

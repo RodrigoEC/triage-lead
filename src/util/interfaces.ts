@@ -1,6 +1,6 @@
 export interface GetLeadsOptions {
   filters?: {
-    status?: Lead['status'];
+    status?: ILead['status'];
     email?: string;
     name?: string;
     company?: string;
@@ -17,18 +17,18 @@ export interface GetLeadsOptions {
 /**
  * Defines the structure of a Lead object for type safety.
  */
-export interface Lead {
+export interface ILead {
   id: number;
   name: string;
   company: string;
   email: string;
   source: string;
-  score: 'hot' | 'medium' | 'high' | 'low';
+  score: number;
   status: 'new' | 'contacted' | 'qualified' | 'converted' | 'disqualified';
 }
 
 export interface GetLeadsResponse {
-  leads: Lead[];
+  leads: ILead[];
   total: number;
 }
 
