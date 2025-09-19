@@ -9,7 +9,7 @@ function App() {
           height={200}
           alt=""
           src="/uitify.png"
-          className="w-[40] h-[40]"
+          className="w-44 h-44"
         />
         <h1 className="text-4xl font-bold">Uitify candidates selection</h1>
       </div>
