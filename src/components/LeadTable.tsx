@@ -8,15 +8,17 @@ import { LeadDetailPanel } from "./LeadDetailPanel";
 
 export const LeadTable = ({
   rootFilter,
+  onLeadConverted,
 }: {
   rootFilter?: GetLeadsOptions;
+  onLeadConverted: () => void,
 }) => {
   return (
     <Table<ILead, GetLeadsOptions>
       fetchData={getLeads}
       dataKey="leads"
       renderRow={(lead, onUpdate, onRowClick) => (
-        <Lead key={lead.id} lead={lead} onRowClick={onRowClick} onUpdate={onUpdate} />
+        <Lead key={lead.id} lead={lead} onLeadConverted={onLeadConverted} onRowClick={onRowClick} onUpdate={onUpdate} />
       )}
       renderSlideOverContent={(lead, onUpdate, onClose) => (
         <LeadDetailPanel lead={lead} onUpdate={onUpdate} onClose={onClose} />

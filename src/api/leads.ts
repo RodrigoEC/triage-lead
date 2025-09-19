@@ -1,5 +1,6 @@
-import type { GetLeadsOptions, GetLeadsResponse, ILead } from "../util/interfaces";
+import type { GetLeadsOptions, GetLeadsResponse, ILead, IOpportunity } from "../util/interfaces";
 import leads from "./leads.json";
+import { createOpportunity } from "./opportunities";
 
 const LEADS_STORAGE_KEY = "leadsData";
 
@@ -106,4 +107,21 @@ export const updateLead = (
 
   saveLeadsToStorage(leadsData);
   return updatedLead;
+};
+
+/**
+ * CONVERT: Converts a lead to an opportunity.
+ * @param lead - The lead to convert.
+ */
+export const convertLead = (lead: ILead): IOpportunity => {
+  updateLead(lead.id, { status: "converted" });
+
+  const newOpportunity = createOpportunity({
+    name: lead.name,
+    accountName: lead.company,
+    stage: "Prospecting",
+    amount: null,
+  });
+
+  return newOpportunity;
 };

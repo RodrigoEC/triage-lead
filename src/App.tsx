@@ -7,6 +7,10 @@ type View = "leads" | "opportunities";
 function App() {
   const [activeView, setActiveView] = useState<View>("leads");
 
+  const handleLeadConverted = () => {
+    setActiveView("opportunities");
+  };
+
   return (
     <div className="flex flex-col gap-8 w-full p-2 max-w-[1440px] mx-auto">
       <div className="flex items-center flex-row gap-4">
@@ -45,7 +49,11 @@ function App() {
           </nav>
         </div>
         <div className="mt-8">
-          {activeView === "leads" ? <LeadTable /> : <OpportunityTable />}
+          {activeView === "leads" ? (
+            <LeadTable onLeadConverted={handleLeadConverted} />
+          ) : (
+            <OpportunityTable />
+          )}
         </div>
       </div>
     </div>

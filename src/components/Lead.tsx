@@ -1,15 +1,16 @@
 import { useState } from "react";
+import { convertLead, updateLead } from "../api/leads";
 import { Icon } from "./Icon";
-import type { ILead } from "../util/interfaces";
 import { Email } from "./Email";
+import type { ILead } from "../util/interfaces";
 import { Select } from "./Select";
 import { STATUS_OPTIONS } from "../util/constants";
-import { updateLead } from "../api/leads";
 
 interface LeadProps {
   lead: ILead;
   onUpdate: () => void;
   onRowClick: () => void;
+  onLeadConverted: () => void;
 }
 
 const ScoreBadge = ({ score }: { score: number }) => {
@@ -48,7 +49,7 @@ const ScoreBadge = ({ score }: { score: number }) => {
   );
 };
 
-export const Lead = ({ lead, onUpdate, onRowClick }: LeadProps) => {
+export const Lead = ({ lead, onUpdate, onRowClick, onLeadConverted }: LeadProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [currLead, setCurrLead] = useState(lead);
 
@@ -69,6 +70,12 @@ export const Lead = ({ lead, onUpdate, onRowClick }: LeadProps) => {
   const handleCancel = () => {
     setCurrLead(lead);
     setIsEditing(false);
+  };
+
+  const handleConvert = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    convertLead(lead);
+    onLeadConverted();
   };
 
   return (
@@ -136,8 +143,8 @@ export const Lead = ({ lead, onUpdate, onRowClick }: LeadProps) => {
           </>
         )}
       </td>
-      <td className="px-6 py-4 text-sm">
-        <button className="cursor-pointer p-2">
+      <td className="px-6 py-4 text-sm" onClick={handleConvert}>
+        <button className="cursor-pointer p-2" title="Convert Lead">
           <Icon id="approved" size={20} />
         </button>
       </td>

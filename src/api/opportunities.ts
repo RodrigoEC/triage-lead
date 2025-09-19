@@ -39,6 +39,23 @@ const saveOpportunitiesToStorage = (data: IOpportunity[]) => {
 };
 
 /**
+ * CREATE: Adds a new opportunity.
+ * @param opportunityData - The data for the new opportunity.
+ */
+export const createOpportunity = (
+  opportunityData: Omit<IOpportunity, 'id'>,
+): IOpportunity => {
+  const newId = `O-${String(opportunitiesData.length + 1).padStart(3, '0')}`;
+  const newOpportunity: IOpportunity = {
+    id: newId,
+    ...opportunityData,
+  };
+  opportunitiesData.unshift(newOpportunity);
+  saveOpportunitiesToStorage(opportunitiesData);
+  return newOpportunity;
+};
+
+/**
  * READ: Retrieves all opportunities, with optional filtering and sorting.
  * @param options - An object with optional filters and sorting parameters.
  */
