@@ -80,7 +80,7 @@ export const Opportunity = ({ opportunity, onUpdate }: OpportunityProps) => {
       </td>
       <td className="px-6 py-4 text-sm text-center">
         <Select
-          value={currentOpportunity.stage}
+          defaultValue={currentOpportunity.stage}
           isEditing={isEditing}
           options={STAGE_OPTIONS}
           onChange={(stage: string) =>
