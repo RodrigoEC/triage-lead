@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { updateLead } from "../api/leads";
 import { Icon } from "./Icon";
-import { Email } from "./Email";
 import type { ILead } from "../util/interfaces";
+import { Email } from "./Email";
 import { Select } from "./Select";
 import { STATUS_OPTIONS } from "../util/constants";
+import { updateLead } from "../api/leads";
 
 interface LeadProps {
   lead: ILead;
   onUpdate: () => void;
+  onRowClick: () => void;
 }
 
 const ScoreBadge = ({ score }: { score: number }) => {
@@ -45,9 +46,9 @@ const ScoreBadge = ({ score }: { score: number }) => {
       <span className="text-gray-500 text-xs">({score})</span>
     </div>
   );
-}
+};
 
-export const Lead = ({ lead, onUpdate }: LeadProps) => {
+export const Lead = ({ lead, onUpdate, onRowClick }: LeadProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [currLead, setCurrLead] = useState(lead);
 
@@ -73,15 +74,14 @@ export const Lead = ({ lead, onUpdate }: LeadProps) => {
   return (
     <tr className="group bg-white hover:bg-gray-50">
       <td className="shadow-2xl lg:shadow-none box-border sticky left-0 z-10 bg-white px-6 py-4 text-sm text-gray-900 text-start group-hover:bg-gray-50">
-        {currLead.name}
+        <div className="w-fit flex gap-2 items-center cursor-pointer" onClick={onRowClick}>
+          <span className="hover:underline">{currLead.name}</span>
+          <Icon id="expand" className="-rotate-90" size={10} />
+        </div>
       </td>
       <td className="px-6 py-4 text-sm text-start">{currLead.company}</td>
       <td className="px-6 py-4 text-sm text-start">
-        <Email
-          lead={currLead}
-          isEditing={isEditing}
-          onChange={setCurrLead}
-        />
+        <Email lead={currLead} isEditing={isEditing} onChange={setCurrLead} />
       </td>
       <td className="px-6 py-4 text-sm text-center">
         <Select
@@ -125,6 +125,13 @@ export const Lead = ({ lead, onUpdate }: LeadProps) => {
               title="Edit"
             >
               <Icon id="edit" size={18} />
+            </button>
+            <button
+              onClick={onRowClick}
+              className="cursor-pointer p-2"
+              title="Edit"
+            >
+              <Icon id="fullscreen" size={18} />
             </button>
           </>
         )}

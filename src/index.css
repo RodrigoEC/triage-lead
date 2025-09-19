@@ -26,7 +26,6 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  background: var(--color-gray-200);
   border-color: var(--color-gray-300);
   transition: all 300ms;
 }

@@ -3,9 +3,21 @@ import type { SortOptions } from '../util/interfaces';
 import { Icon } from './Icon';
 import { DEFAULT_SORT } from '../util/constants';
 import { TableNav } from './TableNav';
-import type { FetchDataOptions, FetchDataResponse } from '../util/types';
+import { SlideOver } from './SlideOver';
 
+type FetchDataResponse<T> = {
+  [key: string]: T[] | number;
+  total: number;
+};
 
+export type FetchDataOptions = {
+  filters?: Record<string, unknown>;
+  sorting?: Record<string, 'asc' | 'desc'>;
+  pagination?: {
+    page: number;
+    limit: number;
+  };
+};
 
 type FetchDataFunction<T, U extends FetchDataOptions> = (
   options: U
@@ -14,14 +26,16 @@ type FetchDataFunction<T, U extends FetchDataOptions> = (
 interface TableProps<T, U extends FetchDataOptions> {
   fetchData: FetchDataFunction<T, U>;
   dataKey: string;
-  renderRow: (item: T, onUpdate: () => void) => React.ReactNode;
+  renderRow: (item: T, onRowClick: () => void,  onUpdate: () => void) => React.ReactNode;
   TableHeadComponent: React.ComponentType<{
     onFilterChange: (field: string, value: string) => void;
     onSortChange: (field: SortOptions) => void;
   }>;
+  renderSlideOverContent: (item: T, onUpdate: () => void, onClose: () => void) => React.ReactNode;
   itemsPerPage: number;
   noDataMessage: string;
   sortKey: string;
+  slideOverTitle: string;
   rootFilter?: U;
 }
 
@@ -30,10 +44,12 @@ export const Table = <T, U extends FetchDataOptions>({
   dataKey,
   renderRow,
   TableHeadComponent,
+  renderSlideOverContent,
   itemsPerPage,
   noDataMessage,
   sortKey,
-  rootFilter,
+  slideOverTitle,
+  rootFilter
 }: TableProps<T, U>) => {
   const [data, setData] = useState<T[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -41,6 +57,7 @@ export const Table = <T, U extends FetchDataOptions>({
   const [sorting, setSorting] = useState<SortOptions>(DEFAULT_SORT);
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
+  const [selectedItem, setSelectedItem] = useState<T | null>(null);
 
   const fetchDataCallback = useCallback(async () => {
     setLoading(true);
@@ -107,7 +124,7 @@ export const Table = <T, U extends FetchDataOptions>({
           />
           {!loading && (
             <tbody className="w-full divide-y divide-gray-700">
-              {data.map((item) => renderRow(item, fetchDataCallback))}
+              {data.map((item) => renderRow(item, fetchDataCallback, () => setSelectedItem(item)))}
             </tbody>
           )}
         </table>
@@ -134,6 +151,16 @@ export const Table = <T, U extends FetchDataOptions>({
           onPrevPage={handlePrevPage}
         />
       )}
+      <SlideOver
+        isOpen={selectedItem !== null}
+        onClose={() => setSelectedItem(null)}
+        title={slideOverTitle}
+      >
+        {selectedItem &&
+          renderSlideOverContent(selectedItem, fetchDataCallback, () =>
+            setSelectedItem(null)
+          )}
+      </SlideOver>
     </div>
   );
 };
