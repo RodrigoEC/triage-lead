@@ -16,7 +16,7 @@ export const SlideOver = ({
   return (
     <div
       className={`relative z-50 ${
-        isOpen ? "pointer-events-auto" : "pointer-events-none"
+        isOpen ? "overscroll-none pointer-events-auto" : "pointer-events-none"
       }`}
     >
       {/* Backdrop */}

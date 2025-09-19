@@ -18,9 +18,9 @@ const LeadDetailItem = ({
   label: string;
   value: React.ReactNode;
 }) => (
-  <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+  <div className="flex flex-col items-start gap-2 py-4 px-0">
     <dt className="text-sm font-medium leading-6 text-gray-900">{label}</dt>
-    <dd className="w-fit mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+    <dd className="w-fit mt-1 text-sm leading-6 text-gray-700 ">
       {value}
     </dd>
   </div>
