@@ -1,10 +1,8 @@
-import type { ReactElement } from "react";
+import { useState, type ReactElement } from "react";
 import { DEFAULT_SORT, DEFAULT_STATUS, SORT_OPTIONS, STATUS_OPTIONS } from "../util/constants";
 import type { SortOptions } from "../util/interfaces";
 import { Input } from "./Input";
 import { Select } from "./Select";
-
-
 
 export const TableHead = ({
   onFilterChange,
@@ -13,6 +11,16 @@ export const TableHead = ({
   onFilterChange: (field: string, value: string) => void;
   onSortChange: (field: SortOptions) => void;
 }) => {
+  const [sort, setSort] = useState<SortOptions>(DEFAULT_SORT);
+
+  const handleSort = () => {
+    let newSort: SortOptions;
+    if (sort === "unsorted") newSort = "desc";
+    else if (sort === "desc") newSort = "asc";
+    else newSort = "unsorted";
+    setSort(newSort);
+    onSortChange(newSort);
+  };
   const TABLE_HEADERS: { [key: string]: { component?: () => ReactElement } } = {
     name: { component: () => <Input text={"name"} onChange={onFilterChange} /> },
     company: {

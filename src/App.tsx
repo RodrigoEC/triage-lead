@@ -1,4 +1,5 @@
 import { LeadTable } from "./components/LeadTable";
+import { OpportunityTable } from "./components/OpportunityTable";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div>
         <h2 className="text-3xl font-bold mb-4 text-left">Leads</h2>
         <LeadTable />
+        <OpportunityTable />
       </div>
     </div>
   );

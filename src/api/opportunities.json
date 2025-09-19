@@ -1,0 +1,352 @@
+[
+  {
+    "id": "O-001",
+    "name": "Ricardo Trevino",
+    "stage": "Closed Won",
+    "amount": 10662,
+    "accountName": "Franklin-Armstrong"
+  },
+  {
+    "id": "O-002",
+    "name": "Rita Rogers",
+    "stage": "Negotiation",
+    "amount": 41117,
+    "accountName": "Williams, Harris and Stephens"
+  },
+  {
+    "id": "O-003",
+    "name": "Mrs. Danielle Carpenter",
+    "stage": "Prospecting",
+    "amount": null,
+    "accountName": "Douglas, Salinas and Lucas"
+  },
+  {
+    "id": "O-004",
+    "name": "Cheryl Cooke",
+    "stage": "Negotiation",
+    "amount": 29374,
+    "accountName": "Dunn LLC"
+  },
+  {
+    "id": "O-005",
+    "name": "Denise Wilkerson",
+    "stage": "Proposal Sent",
+    "amount": 29769,
+    "accountName": "Burke Group"
+  },
+  {
+    "id": "O-006",
+    "name": "Gregory Scott",
+    "stage": "Closed Lost",
+    "amount": 48188,
+    "accountName": "Sparks Group"
+  },
+  {
+    "id": "O-007",
+    "name": "Phillip Vega III",
+    "stage": "Closed Lost",
+    "amount": 7891,
+    "accountName": "Bradshaw-Lester"
+  },
+  {
+    "id": "O-008",
+    "name": "Kelli Rogers",
+    "stage": "Prospecting",
+    "amount": 24730,
+    "accountName": "Wilcox-Cox"
+  },
+  {
+    "id": "O-009",
+    "name": "Cynthia Jacobs",
+    "stage": "Prospecting",
+    "amount": null,
+    "accountName": "Adkins LLC"
+  },
+  {
+    "id": "O-010",
+    "name": "Kevin Bridges",
+    "stage": "Prospecting",
+    "amount": 8986,
+    "accountName": "Gonzalez, Lewis and Moore"
+  },
+  {
+    "id": "O-011",
+    "name": "Rachel Lin",
+    "stage": "Proposal Sent",
+    "amount": null,
+    "accountName": "Cain, Wu and Wright"
+  },
+  {
+    "id": "O-012",
+    "name": "Justin Martinez",
+    "stage": "Prospecting",
+    "amount": null,
+    "accountName": "Rodriguez Ltd"
+  },
+  {
+    "id": "O-013",
+    "name": "Keith Johnson",
+    "stage": "Negotiation",
+    "amount": 25642,
+    "accountName": "Brown, Hunter and Dunn"
+  },
+  {
+    "id": "O-014",
+    "name": "Kristina Porter",
+    "stage": "Negotiation",
+    "amount": 30663,
+    "accountName": "Lamb-Morton"
+  },
+  {
+    "id": "O-015",
+    "name": "Miranda Anderson",
+    "stage": "Closed Won",
+    "amount": null,
+    "accountName": "Williams, Brown and Evans"
+  },
+  {
+    "id": "O-016",
+    "name": "Heather Parker",
+    "stage": "Closed Won",
+    "amount": 23457,
+    "accountName": "Kent PLC"
+  },
+  {
+    "id": "O-017",
+    "name": "Kevin Gonzalez",
+    "stage": "Prospecting",
+    "amount": null,
+    "accountName": "Downs-Strickland"
+  },
+  {
+    "id": "O-018",
+    "name": "Jacqueline Logan",
+    "stage": "Closed Lost",
+    "amount": null,
+    "accountName": "Steele and Sons"
+  },
+  {
+    "id": "O-019",
+    "name": "Helen Robbins",
+    "stage": "Negotiation",
+    "amount": null,
+    "accountName": "Choi and Sons"
+  },
+  {
+    "id": "O-020",
+    "name": "Melinda Shepard",
+    "stage": "Prospecting",
+    "amount": 22480,
+    "accountName": "Jackson, Garza and Moran"
+  },
+  {
+    "id": "O-021",
+    "name": "Robert Weeks",
+    "stage": "Prospecting",
+    "amount": null,
+    "accountName": "Davenport Group"
+  },
+  {
+    "id": "O-022",
+    "name": "Matthew Sanchez",
+    "stage": "Negotiation",
+    "amount": 8771,
+    "accountName": "Guzman-Boyle"
+  },
+  {
+    "id": "O-023",
+    "name": "Sarah Riley",
+    "stage": "Closed Won",
+    "amount": null,
+    "accountName": "Mccoy Group"
+  },
+  {
+    "id": "O-024",
+    "name": "Luis Mueller",
+    "stage": "Negotiation",
+    "amount": 14235,
+    "accountName": "Kennedy-Oconnor"
+  },
+  {
+    "id": "O-025",
+    "name": "Scott Cruz",
+    "stage": "Closed Won",
+    "amount": null,
+    "accountName": "Miller, Sosa and Wright"
+  },
+  {
+    "id": "O-026",
+    "name": "Miguel Green",
+    "stage": "Closed Lost",
+    "amount": null,
+    "accountName": "Fisher LLC"
+  },
+  {
+    "id": "O-027",
+    "name": "Paula Delgado",
+    "stage": "Proposal Sent",
+    "amount": null,
+    "accountName": "Smith Ltd"
+  },
+  {
+    "id": "O-028",
+    "name": "Sheri Smith",
+    "stage": "Closed Won",
+    "amount": null,
+    "accountName": "Shelton-Lewis"
+  },
+  {
+    "id": "O-029",
+    "name": "Jacob Wheeler",
+    "stage": "Proposal Sent",
+    "amount": 29410,
+    "accountName": "Parker, Travis and Gallegos"
+  },
+  {
+    "id": "O-030",
+    "name": "Cory Burke",
+    "stage": "Proposal Sent",
+    "amount": null,
+    "accountName": "Curtis, Herrera and Lowe"
+  },
+  {
+    "id": "O-031",
+    "name": "Vincent Garcia",
+    "stage": "Closed Lost",
+    "amount": 36555,
+    "accountName": "Peterson, Jones and Torres"
+  },
+  {
+    "id": "O-032",
+    "name": "Brian Delgado",
+    "stage": "Prospecting",
+    "amount": 16079,
+    "accountName": "Henry-Parker"
+  },
+  {
+    "id": "O-033",
+    "name": "Sarah Drake",
+    "stage": "Prospecting",
+    "amount": null,
+    "accountName": "Young Group"
+  },
+  {
+    "id": "O-034",
+    "name": "Christopher Barnes",
+    "stage": "Closed Lost",
+    "amount": null,
+    "accountName": "Vazquez-Elliott"
+  },
+  {
+    "id": "O-035",
+    "name": "Ms. Kayla Martinez",
+    "stage": "Closed Lost",
+    "amount": 31136,
+    "accountName": "Gonzalez-Stuart"
+  },
+  {
+    "id": "O-036",
+    "name": "Anthony Cochran",
+    "stage": "Proposal Sent",
+    "amount": null,
+    "accountName": "Garcia, Jackson and Washington"
+  },
+  {
+    "id": "O-037",
+    "name": "Maria Roy",
+    "stage": "Proposal Sent",
+    "amount": null,
+    "accountName": "Walker, Smith and Ward"
+  },
+  {
+    "id": "O-038",
+    "name": "Kristen Johnson",
+    "stage": "Closed Lost",
+    "amount": 4477,
+    "accountName": "Lopez, Villarreal and Gibson"
+  },
+  {
+    "id": "O-039",
+    "name": "Brittney Thomas",
+    "stage": "Closed Won",
+    "amount": null,
+    "accountName": "Lewis, Adams and Montes"
+  },
+  {
+    "id": "O-040",
+    "name": "Lisa Brown",
+    "stage": "Negotiation",
+    "amount": 42498,
+    "accountName": "Smith Inc"
+  },
+  {
+    "id": "O-041",
+    "name": "Rebecca Morrow",
+    "stage": "Closed Won",
+    "amount": 4605,
+    "accountName": "Johnson, Grant and Miles"
+  },
+  {
+    "id": "O-042",
+    "name": "Amber Mitchell",
+    "stage": "Closed Won",
+    "amount": null,
+    "accountName": "Williamson LLC"
+  },
+  {
+    "id": "O-043",
+    "name": "John Acosta",
+    "stage": "Negotiation",
+    "amount": 1692,
+    "accountName": "Clark, Harper and Sullivan"
+  },
+  {
+    "id": "O-044",
+    "name": "Regina Washington",
+    "stage": "Proposal Sent",
+    "amount": 38012,
+    "accountName": "Johnson Ltd"
+  },
+  {
+    "id": "O-045",
+    "name": "Christy Castillo",
+    "stage": "Prospecting",
+    "amount": 14456,
+    "accountName": "Jennings Group"
+  },
+  {
+    "id": "O-046",
+    "name": "Michael Martinez",
+    "stage": "Proposal Sent",
+    "amount": null,
+    "accountName": "Nelson, Price and Jones"
+  },
+  {
+    "id": "O-047",
+    "name": "Frank Moore",
+    "stage": "Proposal Sent",
+    "amount": 28996,
+    "accountName": "Flores PLC"
+  },
+  {
+    "id": "O-048",
+    "name": "David Howe",
+    "stage": "Negotiation",
+    "amount": null,
+    "accountName": "Young, York and White"
+  },
+  {
+    "id": "O-049",
+    "name": "George Sellers",
+    "stage": "Closed Lost",
+    "amount": null,
+    "accountName": "Collins Ltd"
+  },
+  {
+    "id": "O-050",
+    "name": "Kevin Holmes",
+    "stage": "Negotiation",
+    "amount": null,
+    "accountName": "Smith, Wells and Martinez"
+  }
+]

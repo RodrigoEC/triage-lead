@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { updateLead } from "../api";
+import { updateLead } from "../api/leads";
 import { Icon } from "./Icon";
 import { Email } from "./Email";
 import type { ILead } from "../util/interfaces";
@@ -8,9 +8,46 @@ import { STATUS_OPTIONS } from "../util/constants";
 
 interface LeadProps {
   lead: ILead;
+  onUpdate: () => void;
 }
 
-export const Lead = ({ lead }: LeadProps) => {
+const ScoreBadge = ({ score }: { score: number }) => {
+  let badge;
+  if (score >= 850) {
+    badge = (
+      <span className="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700">
+        Hot
+      </span>
+    );
+  } else if (score >= 650) {
+    badge = (
+      <span className="inline-flex items-center rounded-md bg-amber-100 px-2 py-1 text-xs font-medium text-amber-800">
+        High
+      </span>
+    );
+  } else if (score >= 400) {
+    badge = (
+      <span className="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
+        Medium
+      </span>
+    );
+  } else {
+    badge = (
+      <span className="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+        Low
+      </span>
+    );
+  }
+
+  return (
+    <div className="flex flex-col items-start gap-1">
+      {badge}
+      <span className="text-gray-500 text-xs">({score})</span>
+    </div>
+  );
+}
+
+export const Lead = ({ lead, onUpdate }: LeadProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [currLead, setCurrLead] = useState(lead);
 
@@ -24,15 +61,12 @@ export const Lead = ({ lead }: LeadProps) => {
       email: currLead.email,
       status: currLead.status,
     });
+    onUpdate();
     setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setCurrLead({
-      ...lead,
-      email: currLead.email,
-      status: currLead.status,
-    });
+    setCurrLead(lead);
     setIsEditing(false);
   };
 
@@ -62,7 +96,9 @@ export const Lead = ({ lead }: LeadProps) => {
           }
         />
       </td>
-      <td className="px-6 py-4 text-sm">{currLead.score}</td>
+      <td className="px-6 py-4 text-sm">
+        <ScoreBadge score={currLead.score} />
+      </td>
       <td className="flex gap-2 px-6 py-4 text-sm text-right font-medium w-[6rem]">
         {isEditing ? (
           <>

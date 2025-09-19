@@ -3,8 +3,8 @@ import { Icon } from "./Icon";
 interface TableNavProps {
   page: number;
   totalPages: number;
-  totalLeads: number;
-  leadsPerPage: number;
+  totalItems: number;
+  itemsPerPage: number;
   onNextPage: () => void;
   onPrevPage: () => void;
 }
@@ -12,8 +12,8 @@ interface TableNavProps {
 export const TableNav = ({
   page,
   totalPages,
-  totalLeads,
-  leadsPerPage,
+  totalItems,
+  itemsPerPage,
   onNextPage,
   onPrevPage,
 }: TableNavProps) => {
@@ -40,13 +40,13 @@ export const TableNav = ({
           <p className="text-sm text-gray-700">
             Showing{" "}
             <span className="font-medium">
-              {(page - 1) * leadsPerPage + 1}
+                {(page - 1) * itemsPerPage + 1}
             </span>{" "}
             to{" "}
             <span className="font-medium">
-              {Math.min(page * leadsPerPage, totalLeads)}
+                {Math.min(page * itemsPerPage, totalItems)}
             </span>{" "}
-            of <span className="font-medium">{totalLeads}</span> results
+              of <span className="font-medium">{totalItems}</span> results
           </p>
         </div>
         <div>
