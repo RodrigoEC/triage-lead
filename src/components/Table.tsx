@@ -25,7 +25,7 @@ interface TableProps<T, U extends FetchDataOptions> {
   rootFilter?: U;
 }
 
-export const Table = <T extends { id: unknown }, U extends FetchDataOptions>({
+export const Table = <T, U extends FetchDataOptions>({
   fetchData,
   dataKey,
   renderRow,

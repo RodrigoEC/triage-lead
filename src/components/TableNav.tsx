@@ -64,7 +64,7 @@ export const TableNav = ({
             </button>
             <span
               aria-current="page"
-              className="relative z-10 inline-flex items-center bg-green-950 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+              className="relative z-10 inline-flex items-center bg-green-950 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-green-600"
             >
               {page}
             </span>

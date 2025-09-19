@@ -9,7 +9,7 @@ import { Input } from "./Input";
 import { Select } from "./Select";
 import { Icon } from "./Icon";
 
-export const TableHead = ({
+export const LeadTableHead = ({
   onFilterChange,
   onSortChange,
 }: {
