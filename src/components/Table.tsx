@@ -31,11 +31,11 @@ interface TableProps<T, U extends FetchDataOptions> {
     onFilterChange: (field: string, value: string) => void;
     onSortChange: (field: SortOptions) => void;
   }>;
-  renderSlideOverContent: (item: T, onUpdate: () => void, onClose: () => void) => React.ReactNode;
+  renderSlideOverContent?: (item: T, onUpdate: () => void, onClose: () => void) => React.ReactNode;
   itemsPerPage: number;
   noDataMessage: string;
   sortKey: string;
-  slideOverTitle: string;
+  slideOverTitle?: string;
   rootFilter?: U;
 }
 
