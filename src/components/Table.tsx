@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
-import type { SortOptions } from '../util/interfaces';
-import { Icon } from './Icon';
-import { DEFAULT_SORT } from '../util/constants';
-import { TableNav } from './TableNav';
-import { SlideOver } from './SlideOver';
+import { useCallback, useEffect, useState } from "react";
+import type { SortOptions } from "../util/interfaces";
+import { Icon } from "./Icon";
+import { DEFAULT_SORT } from "../util/constants";
+import { TableNav } from "./TableNav";
+import { SlideOver } from "./SlideOver";
 
 type FetchDataResponse<T> = {
   [key: string]: T[] | number;
@@ -12,7 +12,7 @@ type FetchDataResponse<T> = {
 
 export type FetchDataOptions = {
   filters?: Record<string, unknown>;
-  sorting?: Record<string, 'asc' | 'desc'>;
+  sorting?: Record<string, "asc" | "desc">;
   pagination?: {
     page: number;
     limit: number;
@@ -26,12 +26,20 @@ type FetchDataFunction<T, U extends FetchDataOptions> = (
 interface TableProps<T, U extends FetchDataOptions> {
   fetchData: FetchDataFunction<T, U>;
   dataKey: string;
-  renderRow: (item: T, onRowClick: () => void,  onUpdate: () => void) => React.ReactNode;
+  renderRow: (
+    item: T,
+    onRowClick: () => void,
+    onUpdate: () => void
+  ) => React.ReactNode;
   TableHeadComponent: React.ComponentType<{
     onFilterChange: (field: string, value: string) => void;
     onSortChange: (field: SortOptions) => void;
   }>;
-  renderSlideOverContent?: (item: T, onUpdate: () => void, onClose: () => void) => React.ReactNode;
+  renderSlideOverContent?: (
+    item: T,
+    onUpdate: () => void,
+    onClose: () => void
+  ) => React.ReactNode;
   itemsPerPage: number;
   noDataMessage: string;
   sortKey: string;
@@ -49,7 +57,7 @@ export const Table = <T, U extends FetchDataOptions>({
   noDataMessage,
   sortKey,
   slideOverTitle,
-  rootFilter
+  rootFilter,
 }: TableProps<T, U>) => {
   const [data, setData] = useState<T[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -124,7 +132,9 @@ export const Table = <T, U extends FetchDataOptions>({
           />
           {!loading && (
             <tbody className="w-full divide-y divide-gray-700">
-              {data.map((item) => renderRow(item, fetchDataCallback, () => setSelectedItem(item)))}
+              {data.map((item) =>
+                renderRow(item, fetchDataCallback, () => setSelectedItem(item))
+              )}
             </tbody>
           )}
         </table>
@@ -151,16 +161,18 @@ export const Table = <T, U extends FetchDataOptions>({
           onPrevPage={handlePrevPage}
         />
       )}
-      <SlideOver
-        isOpen={selectedItem !== null}
-        onClose={() => setSelectedItem(null)}
-        title={slideOverTitle}
-      >
-        {selectedItem &&
-          renderSlideOverContent(selectedItem, fetchDataCallback, () =>
-            setSelectedItem(null)
-          )}
-      </SlideOver>
+      {slideOverTitle && renderSlideOverContent && (
+        <SlideOver
+          isOpen={selectedItem !== null}
+          onClose={() => setSelectedItem(null)}
+          title={slideOverTitle}
+        >
+          {selectedItem &&
+            renderSlideOverContent(selectedItem, fetchDataCallback, () =>
+              setSelectedItem(null)
+            )}
+        </SlideOver>
+      )}
     </div>
   );
 };
