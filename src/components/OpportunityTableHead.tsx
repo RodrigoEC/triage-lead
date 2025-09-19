@@ -1,24 +1,24 @@
-import { useState } from 'react';
 import type { SortOptions } from '../util/interfaces';
 import { Icon } from './Icon';
-import { DEFAULT_SORT } from '../util/constants';
 import { Input } from './Input';
 
 export const OpportunityTableHead = ({
   onFilterChange,
   onSortChange,
+  filters,
+  sorting,
 }: {
   onFilterChange: (field: string, value: string) => void;
   onSortChange: (field: SortOptions) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  filters: Record<string, any>;
+  sorting: SortOptions;
 }) => {
-  const [sort, setSort] = useState<SortOptions>(DEFAULT_SORT);
-
   const handleSort = () => {
     let newSort: SortOptions;
-    if (sort === 'unsorted') newSort = 'desc';
-    else if (sort === 'desc') newSort = 'asc';
+    if (sorting === 'unsorted') newSort = 'desc';
+    else if (sorting === 'desc') newSort = 'asc';
     else newSort = 'unsorted';
-    setSort(newSort);
     onSortChange(newSort);
   };
 
@@ -30,14 +30,14 @@ export const OpportunityTableHead = ({
           className="sticky left-0 z-20 bg-gray-50 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
         >
           Name
-          <Input text="name" onChange={onFilterChange} />
+          <Input text="name" onChange={onFilterChange} defaultValue={filters.name || ""} />
         </th>
         <th
           scope="col"
           className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
         >
           Account
-          <Input text="accountName" onChange={onFilterChange} />
+          <Input text="accountName" onChange={onFilterChange} defaultValue={filters.accountName || ""} />
         </th>
         <th
           scope="col"
@@ -52,9 +52,9 @@ export const OpportunityTableHead = ({
               id="expand"
               size={12}
               className={`transition-transform ${
-                sort === 'desc'
+                sorting === 'desc'
                   ? 'rotate-0'
-                  : sort === 'asc'
+                  : sorting === 'asc'
                   ? 'rotate-180'
                   : 'rotate-90'
               }`}
