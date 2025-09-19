@@ -5,9 +5,7 @@ import type { GetLeadsOptions, Lead, SortOptions } from "../util/interfaces";
 import { debounce } from "../util";
 import { Icon } from "./Icon";
 import { TableHead } from "./TableHead";
-
-const DEFAULT_SORT = "none";
-
+import { DEFAULT_SORT } from "../util/constants";
 
 export const CandidateTable = ({
   rootFilter,

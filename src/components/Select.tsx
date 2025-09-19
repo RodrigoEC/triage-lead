@@ -12,15 +12,15 @@ export const Select = ({
   options: string[];
 }) => {
   return isEditing ? (
-    <div className="relative text-start">
+    <div className="relative text-start min-w-[100px]">
       <select
         defaultValue={defaultValue}
         onChange={(e) => onChange(e.target.value)}
-        className="capitalize w-full cursor-pointer pr-6 mt-1 pb-1 border-b-1 border-grey-100"
+        className="capitalize w-full  cursor-pointer pr-6 mt-1 pb-1 border-b-1 border-grey-100"
       >
         {options.map(
           (option) => (
-            <option key={option}>{option}</option>
+            <option className="capitalize" value={option} key={option}>{option}</option>
           )
         )}
       </select>

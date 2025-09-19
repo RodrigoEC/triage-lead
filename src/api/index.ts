@@ -47,7 +47,7 @@ const scoreValues: Record<Lead["score"], number> = {
  */
 export const getLeads = (options: GetLeadsOptions = {}): Promise<Lead[]> => {
   return new Promise((resolve) => {
-    const randomTimeout = Math.random() * 2000 + 1000;
+    const randomTimeout = Math.random() * 500 + 500;
 
     setTimeout(() => {
       const { filters, sorting } = options;

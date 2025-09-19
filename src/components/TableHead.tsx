@@ -1,8 +1,10 @@
 import type { ReactElement } from "react";
-import { SORT_OPTIONS, STATUS_OPTIONS } from "../util/constants";
+import { DEFAULT_STATUS, SORT_OPTIONS, STATUS_OPTIONS } from "../util/constants";
 import type { SortOptions } from "../util/interfaces";
 import { Input } from "./Input";
 import { Select } from "./Select";
+
+
 
 export const TableHead = ({
   onFilterChange,
@@ -20,12 +22,12 @@ export const TableHead = ({
     status: {
       component: () => (
         <Select
-          defaultValue="ALL"
-          options={[...STATUS_OPTIONS, "all"]
+          defaultValue={DEFAULT_STATUS}
+          options={[...STATUS_OPTIONS, DEFAULT_STATUS]
             .filter((option) => option !== "converted")
-            .map((option) => option.toLocaleUpperCase())}
+            .map((option) => option)}
           onChange={(val: string) =>
-            onFilterChange("status", val !== "ALL" ? val.toLocaleLowerCase() : "")
+            onFilterChange("status", val !== DEFAULT_STATUS ? val.toLocaleLowerCase() : "")
           }
         />
       ),
@@ -33,8 +35,8 @@ export const TableHead = ({
     score: {
       component: () => (
         <Select
-          defaultValue="NONE"
-          options={SORT_OPTIONS.map((option) => option.toLocaleUpperCase())}
+          defaultValue="none"
+          options={SORT_OPTIONS.map((option) => option)}
           onChange={(val) => onSortChange(val.toLocaleLowerCase() as SortOptions)}
         />
       ),

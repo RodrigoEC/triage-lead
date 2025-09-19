@@ -2,9 +2,21 @@ import { CandidateTable } from "./components/CandidateTable";
 
 function App() {
   return (
-    <div className="w-full mt-8 overflow-x-auto">
-      <h2 className="text-3xl font-bold mb-4 text-left">Leads</h2>
-      <CandidateTable />
+    <div className="flex flex-col gap-8 w-full p-2 max-w-[1440px] mx-auto">
+      <div className="flex flex-col items-center gap-4">
+        <img
+          width={200}
+          height={200}
+          alt=""
+          src="/uitify.png"
+          className="w-[40] h-[40]"
+        />
+        <h1 className="text-4xl font-bold">Uitify candidates selection</h1>
+      </div>
+      <div>
+        <h2 className="text-3xl font-bold mb-4 text-left">Leads</h2>
+        <CandidateTable />
+      </div>
     </div>
   );
 }

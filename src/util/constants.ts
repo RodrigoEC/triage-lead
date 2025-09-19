@@ -10,3 +10,7 @@ export const STATUS_OPTIONS: Lead["status"][] = [
 
 
 export const SORT_OPTIONS = ["asc", "desc", "none"];
+
+export const DEFAULT_STATUS = "all";
+
+export const DEFAULT_SORT = "none";
