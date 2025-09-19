@@ -83,26 +83,25 @@ export const CandidateTable = ({
     };
     fetchLeads();
   }, [filters, rootFilter, sorting, page]);
-  
+
   return (
-    <div
-      className={`${
-        leads.length ? "overflow-x-scroll" : "overflow-x-hidden"
-      } w-full rounded-lg box-border`}
-    >
-      <table className="w-full divide-gray-200">
-        <TableHead
-          onFilterChange={handleFilterChange}
-          onSortChange={handleSortChange}
-        />
-        {!loading && (
-          <tbody className="w-full divide-y divide-gray-700">
-            {leads.map((lead) => (
-              <Candidate key={lead.id} lead={lead} />
-            ))}
-          </tbody>
-        )}
-      </table>
+    <div className={`w-full rounded-lg box-border overflow-hidden`}>
+      <div className="w-full overflow-scroll ">
+        <table className="w-full divide-gray-200">
+          <TableHead
+            onFilterChange={handleFilterChange}
+            onSortChange={handleSortChange}
+          />
+          {!loading && (
+            <tbody className="w-full divide-y divide-gray-700">
+              {leads.map((lead) => (
+                <Candidate key={lead.id} lead={lead} />
+              ))}
+            </tbody>
+          )}
+        </table>
+      </div>
+
       {loading && (
         <div className="w-full h-52 flex flex-col items-center justify-center border-1 border-gray-200 rounded-b-lg text-gray-400">
           <Icon id="loading" size={40} className="animate-spin" />
