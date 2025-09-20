@@ -7,6 +7,7 @@ interface TableNavProps {
   itemsPerPage: number;
   onNextPage: () => void;
   onPrevPage: () => void;
+  onPageChange: (page: number) => void;
 }
 
 export const TableNav = ({
@@ -16,7 +17,29 @@ export const TableNav = ({
   itemsPerPage,
   onNextPage,
   onPrevPage,
+  onPageChange,
 }: TableNavProps) => {
+  const getPaginationItems = (
+    currentPage: number,
+    totalPages: number,
+  ): (number | "...")[] => {
+    if (totalPages <= 7) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    if (currentPage <= 4) {
+      return [1, 2, 3, 4, 5, "...", totalPages];
+    }
+
+    if (currentPage >= totalPages - 3) {
+      return [1, "...", totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+    }
+
+    return [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
+  };
+
+  const paginationItems = getPaginationItems(page, totalPages);
+
   return (
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 rounded-b-lg">
       <div className="flex flex-1 justify-between sm:hidden">
@@ -62,12 +85,29 @@ export const TableNav = ({
               <span className="sr-only">Previous</span>
               <Icon id="expand" size={12} className="rotate-90" />
             </button>
-            <span
-              aria-current="page"
-              className="relative z-10 inline-flex items-center bg-green-950 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-green-600"
-            >
-              {page}
-            </span>
+            {paginationItems.map((item, index) => {
+              if (item === "...") {
+                return (
+                  <span
+                    key={`${item}-${index}`}
+                    className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300"
+                  >
+                    ...
+                  </span>
+                );
+              }
+              const isCurrent = item === page;
+              return (
+                <button
+                  key={item}
+                  onClick={() => onPageChange(item)}
+                  aria-current={isCurrent ? "page" : undefined}
+                  className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${isCurrent ? "z-10 bg-green-950 text-white focus-visible:outline-green-600" : "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"} focus:z-20`}
+                >
+                  {item}
+                </button>
+              );
+            })}
             <button
               onClick={onNextPage}
               disabled={page === totalPages}

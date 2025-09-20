@@ -173,6 +173,9 @@ export const Table = <T, U extends FetchDataOptions>({
 
   const handleNextPage = () => page < totalPages && setPage(page + 1);
   const handlePrevPage = () => page > 1 && setPage(page - 1);
+  const handlePageChange = (newPage: number) => {
+    if (newPage >= 1 && newPage <= totalPages) setPage(newPage);
+  };
 
   return (
     <div className={`w-full rounded-lg box-border overflow-hidden`}>
@@ -213,6 +216,7 @@ export const Table = <T, U extends FetchDataOptions>({
           itemsPerPage={itemsPerPage}
           onNextPage={handleNextPage}
           onPrevPage={handlePrevPage}
+          onPageChange={handlePageChange}
         />
       )}
       {slideOverTitle && renderSlideOverContent && (
