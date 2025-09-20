@@ -378,6 +378,15 @@
     "status": "qualified"
   },
   {
+    "id": 190,
+    "name": "Lucas Rodriguez",
+    "company": "Phoenix Systems",
+    "email": "lucas.rodriguez@phoenixsystems.com",
+    "source": "Event",
+    "score": 546,
+    "status": "qualified"
+  },
+  {
     "id": 44,
     "name": "Mia Williams",
     "company": "Stellar Corp",
