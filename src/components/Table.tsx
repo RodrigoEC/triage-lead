@@ -176,7 +176,7 @@ export const Table = <T, U extends FetchDataOptions>({
 
   return (
     <div className={`w-full rounded-lg box-border overflow-hidden`}>
-      <div className="w-full overflow-scroll ">
+      <div className="w-full overflow-auto ">
         <table className="w-full divide-gray-200">
           <TableHeadComponent
             onFilterChange={handleFilterChange}
