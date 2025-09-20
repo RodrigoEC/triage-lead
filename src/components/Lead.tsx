@@ -42,7 +42,7 @@ const ScoreBadge = ({ score }: { score: number }) => {
   }
 
   return (
-    <div className="flex flex-col items-start gap-1">
+    <div className="flex flex-col items-center gap-1">
       {badge}
       <span className="text-gray-500 text-xs">({score})</span>
     </div>
